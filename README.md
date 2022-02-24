@@ -208,3 +208,5 @@ En otra línea de comandos, ejecutar el siguiente comando para subir el servidor
 ```sh
 php artisan serve
 ```
+
+Por último abrir el navegador e ingresar a localhost:8000
