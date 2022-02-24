@@ -153,7 +153,7 @@ Configuración del ambiente de trabajo. Duplicar el archivo .env.example y cambi
 .env.example -> .env
 ```
 
-Ahora en el archivo .env copiar y pegar las siguientes líneas de configuración (En su respectivo bloque)
+Ahora en el archivo .env copiar y pegar las siguientes líneas de configuración (Pegar en su respectivo bloque)
 
 ```sh
 APP_NAME=SENNOVALAB
@@ -185,7 +185,7 @@ Crear symlink de la carpeta de storage en public
 php artisan storage:link
 ```
 
-Realizar la migración de las tablas de bases de datos
+Debe crear una base de datos en MySQL llamada sennovalab. Luego realizar la migración de las tablas de bases de datos
 
 ```sh
 php artisan migrate
