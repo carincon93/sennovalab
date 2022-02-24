@@ -1,0 +1,39 @@
+{
+    "private": true,
+    "scripts": {
+        "dev": "npm run development",
+        "development": "mix",
+        "watch": "mix watch",
+        "watch-poll": "mix watch -- --watch-options-poll=1000",
+        "hot": "mix watch --hot",
+        "prod": "npm run production",
+        "production": "mix --production"
+    },
+    "devDependencies": {
+        "@tailwindcss/forms": "^0.4.0",
+        "alpinejs": "^3.4.2",
+        "autoprefixer": "^10.4.2",
+        "axios": "^0.21",
+        "laravel-mix": "^6.0.6",
+        "lodash": "^4.17.19",
+        "postcss": "^8.4.6",
+        "postcss-import": "^14.0.2",
+        "postcss-nesting": "^10.1.2",
+        "prettier": "^2.5.1",
+        "prettier-plugin-svelte": "^2.6.0",
+        "svelte-material-ui": "^6.0.0-beta.14",
+        "tailwindcss": "^3.0.23"
+    },
+    "dependencies": {
+        "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+        "@inertiajs/inertia": "^0.11.0",
+        "@inertiajs/inertia-svelte": "^0.8.0",
+        "@inertiajs/progress": "^0.2.7",
+        "@popperjs/core": "^2.11.2",
+        "svelte": "^3.46.4",
+        "svelte-i18n": "^3.3.13",
+        "svelte-loader": "^3.1.2",
+        "svelte-loading-spinners": "^0.1.7",
+        "svelte-select": "^4.4.7"
+    }
+}

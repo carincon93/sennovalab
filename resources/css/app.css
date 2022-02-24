@@ -1,0 +1,179 @@
+@import 'svelte-material-ui/bare.css';
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+:root {
+    --mdc-theme-primary: #14a0fe;
+    --mdc-theme-secondary: #207ebd;
+    --mdc-theme-error: #d93025;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+}
+
+button:focus,
+a:focus {
+    outline: none;
+}
+
+.outline-none-important {
+    outline: none !important;
+    border-color: transparent !important;
+    outline-offset: 0px !important;
+    box-shadow: none !important;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+}
+
+[type='checkbox']:not(.mdc-switch__native-control) {
+    position: relative;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #757575;
+    border-radius: 2px;
+}
+
+[type='checkbox']:not(.mdc-switch__native-control):hover {
+    cursor: pointer;
+}
+
+[type='checkbox']:not(.mdc-switch__native-control):hover:before {
+    content: '';
+    background: #52525214;
+    width: 34px;
+    height: 34px;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    border-radius: 50%;
+    right: 0;
+    transition: all 0.4s ease-in;
+    opacity: 1;
+}
+
+[type='checkbox']:not(.mdc-switch__native-control):focus {
+    outline: none;
+    box-shadow: none;
+}
+
+fieldset {
+    min-width: auto;
+}
+
+fieldset[disabled] input,
+fieldset[disabled] textarea,
+fieldset[disabled] select {
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    padding: 0;
+}
+
+fieldset[disabled] .selectContainer {
+    background: transparent !important;
+    height: auto !important;
+    border: 0 !important;
+    padding: 0 !important;
+}
+
+fieldset[disabled] .clearSelect,
+fieldset[disabled] .listContainer,
+fieldset[disabled] .label-required {
+    display: none;
+    opacity: 0;
+}
+
+fieldset[disabled] .selection {
+    white-space: pre-line !important;
+}
+
+fieldset[disabled] .selectedItem {
+    line-height: 1.7 !important;
+    height: auto !important;
+}
+
+.mdc-dialog {
+    z-index: 9999;
+}
+
+.mdc-switch__native-control {
+    width: 64px !important;
+    height: 48px !important;
+}
+
+.mdc-notched-outline--notched .mdc-notched-outline__notch {
+    border-right: 0px;
+    border-left: 0px;
+}
+
+.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__leading,
+.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__notch,
+.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__trailing {
+    border-color: #d5d5d5;
+}
+
+.mdc-text-field--outlined:not(.mdc-text-field--invalid):not(.mdc-text-field--disabled):not(.mdc-text-field--focused):hover .mdc-notched-outline .mdc-notched-outline__leading,
+.mdc-text-field--outlined:not(.mdc-text-field--invalid):not(.mdc-text-field--disabled):not(.mdc-text-field--focused):hover .mdc-notched-outline .mdc-notched-outline__notch,
+.mdc-text-field--outlined:not(.mdc-text-field--invalid):not(.mdc-text-field--disabled):not(.mdc-text-field--focused):hover .mdc-notched-outline .mdc-notched-outline__trailing {
+    border-color: #000;
+}
+
+.mdc-text-field--invalid:not(.mdc-text-field--disabled) .mdc-notched-outline__leading,
+.mdc-text-field--invalid:not(.mdc-text-field--disabled) .mdc-notched-outline__notch,
+.mdc-text-field--invalid:not(.mdc-text-field--disabled) .mdc-notched-outline__trailing {
+    border-color: var(--mdc-theme-error, #d93025);
+}
+
+.mdc-text-field--focused.mdc-text-field--invalid:not(.mdc-text-field--disabled) .mdc-floating-label {
+    color: var(--mdc-theme-error, #d93025);
+}
+
+[type='text']:focus,
+[type='email']:focus,
+[type='url']:focus,
+[type='password']:focus,
+[type='number']:focus,
+[type='date']:focus,
+[type='datetime-local']:focus,
+[type='month']:focus,
+[type='search']:focus,
+[type='tel']:focus,
+[type='time']:focus,
+[type='week']:focus,
+[multiple]:focus,
+textarea:focus,
+select:focus {
+    box-shadow: none !important;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+    box-shadow: 0 0 0 30px white inset !important;
+}
+
+input[type='date'],
+select {
+    border-radius: 4px;
+    border: 1px solid #dbdbdb;
+}
+
+fieldset[disabled] .bg-white.mdc-text-field.mdc-text-field--label-floating {
+    background: transparent !important;
+}
+
+.mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {
+    color: #14a0fe;
+}
