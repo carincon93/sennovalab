@@ -141,7 +141,7 @@ git clone https://github.com/carincon93/sennovalab.git
 cd sennovalab
 ```
 
-Instalar las dependencias de composer.
+Instalar las dependencias de composer
 
 ```sh
 php artisan composer install
