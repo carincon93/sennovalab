@@ -63,7 +63,7 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
-# Configuración mediante Sync vscode Settings
+# Configuración de extensiones mediante Sync vscode Settings
 
 Ir a la opción de extensiones en vscode (Ctrl+Shift+X) e instalar la siguiente extensión:
 
