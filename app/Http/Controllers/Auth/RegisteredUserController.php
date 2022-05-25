@@ -54,4 +54,13 @@ class RegisteredUserController extends Controller
 
         return redirect(RouteServiceProvider::HOME);
     }
+
+    public function registerTwo()
+    {
+        $usr = User::all();
+        return Inertia::render('Auth/RegisterTwo', [
+            'usr' => $usr,
+            'status' => session('status'),
+        ]);
+    }
 }

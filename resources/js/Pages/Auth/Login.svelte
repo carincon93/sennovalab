@@ -75,3 +75,6 @@
 <p class="text-xs mt-6 text-gray-900">
     <a use:inertia href={route('register')} class="text-indigo-500 underline">No tengo cuenta. ¡Quiero registrarme!</a>
 </p>
+<p class="text-xs mt-6 text-gray-900">
+    <a use:inertia href={route('registerTwo')} class="text-indigo-500 underline">¡Quiero registrarme! Externo</a>
+</p>
