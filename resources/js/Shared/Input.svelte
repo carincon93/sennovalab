@@ -19,7 +19,7 @@
 
     $: props = {
         ...$$restProps,
-        class: 'w-full block bg-white',
+        class: 'w-full block bg-white rounded',
     }
 
     function update(event) {
