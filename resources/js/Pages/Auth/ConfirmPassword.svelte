@@ -34,6 +34,6 @@
     </div>
 
     <div class="flex justify-end mt-4">
-        <LoadingButton bind:loading={sending} class="btn-indigo" type="submit">Confirmar</LoadingButton>
+        <LoadingButton bind:loading={sending} type="submit">Confirmar</LoadingButton>
     </div>
 </form>

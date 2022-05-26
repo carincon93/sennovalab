@@ -13,7 +13,7 @@
 </script>
 
 <div class="flex relative justify-center items-center">
-    <Input label={$_('Password')} type={show ? 'text' : 'password'} bind:value {error} {...props} />
+    <Input type={show ? 'text' : 'password'} bind:value {error} {...props} />
     {#if show}
         <button type="button" on:click={() => (show = false)} class="absolute right-1.5">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
