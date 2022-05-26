@@ -10,6 +10,13 @@ class {{ class }} extends Model
     use HasFactory;
 
     /**
+     * table
+     *
+     * @var string
+     */
+    protected $table = 'nombre_tabla_bd';
+
+    /**
      * The attributes that are mass assignable.
      *
      * @var array
