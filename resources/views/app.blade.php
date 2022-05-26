@@ -25,7 +25,7 @@
     </script>
 </head>
 
-<body class="font-sans antialiased">
+<body class="font-nunito antialiased">
     @inertia
 </body>
 
