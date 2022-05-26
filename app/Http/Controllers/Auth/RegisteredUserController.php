@@ -54,4 +54,13 @@ class RegisteredUserController extends Controller
 
         return redirect(RouteServiceProvider::HOME);
     }
+
+    public function registerInt()
+    {
+        $usr = User::all();
+        return Inertia::render('Auth/RegisterInt', [
+            'usr' => $usr,
+            'status' => session('status'),
+        ]);
+    }
 }
