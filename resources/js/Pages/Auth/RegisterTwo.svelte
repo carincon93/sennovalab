@@ -206,9 +206,9 @@
 
     .input {
         position: absolute;
-        top: -3px;
+        /* top: -3px; */
         left: 0px;
-        height: 66%;
+        height: 100%;
         width: 100%;
         border: 1px solid #dadce0;
         border-radius: 7px;

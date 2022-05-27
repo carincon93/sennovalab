@@ -11201,10 +11201,10 @@ ___CSS_LOADER_EXPORT___.push([module.id, "svelte-virtual-list-viewport.svelte-g2
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./node_modules/svelte-loader/index.js?cssPath=C:/xampp/htdocs/sennovalab/resources/js/Pages/Auth/RegisterTwo.svelte.99.css!./resources/js/Pages/Auth/RegisterTwo.svelte":
-/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./node_modules/svelte-loader/index.js?cssPath=C:/xampp/htdocs/sennovalab/resources/js/Pages/Auth/RegisterTwo.svelte.99.css!./resources/js/Pages/Auth/RegisterTwo.svelte ***!
-  \*****************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./node_modules/svelte-loader/index.js?cssPath=C:/xampp/htdocs/sennovalab/resources/js/Pages/Auth/RegisterTwo.svelte.102.css!./resources/js/Pages/Auth/RegisterTwo.svelte":
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./node_modules/svelte-loader/index.js?cssPath=C:/xampp/htdocs/sennovalab/resources/js/Pages/Auth/RegisterTwo.svelte.102.css!./resources/js/Pages/Auth/RegisterTwo.svelte ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -11218,7 +11218,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".signupFrm.svelte-1dxnokn.svelte-1dxnokn{display:flex;justify-content:center;align-items:center;height:100vh}.form.svelte-1dxnokn.svelte-1dxnokn{background-color:white;width:400px;border-radius:8px;padding:20px 40px;box-shadow:0 10px 25px rgba(92, 99, 105, 0.2)}.title.svelte-1dxnokn.svelte-1dxnokn{font-size:25px;color:#ffb700}.inputContainer.svelte-1dxnokn.svelte-1dxnokn{position:relative;height:45px;width:90%;margin-bottom:17px}.input.svelte-1dxnokn.svelte-1dxnokn{position:absolute;top:-3px;left:0px;height:66%;width:100%;border:1px solid #dadce0;border-radius:7px;font-size:16px;padding:0 20px;outline:none;background:none;z-index:1}.label.svelte-1dxnokn.svelte-1dxnokn{position:absolute;left:15px;padding:0 4px;background-color:white;color:#dadce0;font-size:16px;transition:0.5s;z-index:0}.svelte-1dxnokn.svelte-1dxnokn::-moz-placeholder{color:transparent}.svelte-1dxnokn.svelte-1dxnokn:-ms-input-placeholder{color:transparent}.svelte-1dxnokn.svelte-1dxnokn::placeholder{color:transparent}.submitBtn.svelte-1dxnokn.svelte-1dxnokn{display:inline-block;margin-left:auto;padding:4px 30px;border:none;background-color:#ffb700;color:white;border-radius:6px;cursor:pointer;font-size:16px;width:44%}.submitBtn2.svelte-1dxnokn.svelte-1dxnokn{display:inline-block;margin-left:auto;padding:4px 30px;border:none;background-color:white;color:#ffb700;border-radius:6px;cursor:pointer;font-size:16px;width:45%;border:1px solid orange}.submitBtn.svelte-1dxnokn.svelte-1dxnokn:hover{background-color:#ffb700d2;transform:translateY(-2px)}.submitBtn2.svelte-1dxnokn.svelte-1dxnokn:hover{background-color:#ffb700d2;transform:translateY(-2px);color:white}.input.svelte-1dxnokn:focus+.label.svelte-1dxnokn{top:-7px;left:3px;z-index:10;font-size:14px;font-weight:600;color:#ffb700}.input.svelte-1dxnokn:not(:-moz-placeholder-shown)+.label.svelte-1dxnokn{top:-7px;left:3px;z-index:10;font-size:14px;font-weight:600}.input.svelte-1dxnokn:not(:-ms-input-placeholder)+.label.svelte-1dxnokn{top:-7px;left:3px;z-index:10;font-size:14px;font-weight:600}.input.svelte-1dxnokn:not(:placeholder-shown)+.label.svelte-1dxnokn{top:-7px;left:3px;z-index:10;font-size:14px;font-weight:600}.input.svelte-1dxnokn.svelte-1dxnokn:focus{border:2px solid #ffb700}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".signupFrm.svelte-ih3pwe.svelte-ih3pwe{display:flex;justify-content:center;align-items:center;height:100vh}.form.svelte-ih3pwe.svelte-ih3pwe{background-color:white;width:400px;border-radius:8px;padding:20px 40px;box-shadow:0 10px 25px rgba(92, 99, 105, 0.2)}.title.svelte-ih3pwe.svelte-ih3pwe{font-size:25px;color:#ffb700}.inputContainer.svelte-ih3pwe.svelte-ih3pwe{position:relative;height:45px;width:90%;margin-bottom:17px}.input.svelte-ih3pwe.svelte-ih3pwe{position:absolute;left:0px;height:100%;width:100%;border:1px solid #dadce0;border-radius:7px;font-size:16px;padding:0 20px;outline:none;background:none;z-index:1}.label.svelte-ih3pwe.svelte-ih3pwe{position:absolute;left:15px;padding:0 4px;background-color:white;color:#dadce0;font-size:16px;transition:0.5s;z-index:0}.svelte-ih3pwe.svelte-ih3pwe::-moz-placeholder{color:transparent}.svelte-ih3pwe.svelte-ih3pwe:-ms-input-placeholder{color:transparent}.svelte-ih3pwe.svelte-ih3pwe::placeholder{color:transparent}.submitBtn.svelte-ih3pwe.svelte-ih3pwe{display:inline-block;margin-left:auto;padding:4px 30px;border:none;background-color:#ffb700;color:white;border-radius:6px;cursor:pointer;font-size:16px;width:44%}.submitBtn2.svelte-ih3pwe.svelte-ih3pwe{display:inline-block;margin-left:auto;padding:4px 30px;border:none;background-color:white;color:#ffb700;border-radius:6px;cursor:pointer;font-size:16px;width:45%;border:1px solid orange}.submitBtn.svelte-ih3pwe.svelte-ih3pwe:hover{background-color:#ffb700d2;transform:translateY(-2px)}.submitBtn2.svelte-ih3pwe.svelte-ih3pwe:hover{background-color:#ffb700d2;transform:translateY(-2px);color:white}.input.svelte-ih3pwe:focus+.label.svelte-ih3pwe{top:-7px;left:3px;z-index:10;font-size:14px;font-weight:600;color:#ffb700}.input.svelte-ih3pwe:not(:-moz-placeholder-shown)+.label.svelte-ih3pwe{top:-7px;left:3px;z-index:10;font-size:14px;font-weight:600}.input.svelte-ih3pwe:not(:-ms-input-placeholder)+.label.svelte-ih3pwe{top:-7px;left:3px;z-index:10;font-size:14px;font-weight:600}.input.svelte-ih3pwe:not(:placeholder-shown)+.label.svelte-ih3pwe{top:-7px;left:3px;z-index:10;font-size:14px;font-weight:600}.input.svelte-ih3pwe.svelte-ih3pwe:focus{border:2px solid #ffb700}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -16404,10 +16404,10 @@ var update = _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMP
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Auth/RegisterTwo.svelte.99.css!=!./node_modules/svelte-loader/index.js?cssPath=C:/xampp/htdocs/sennovalab/resources/js/Pages/Auth/RegisterTwo.svelte.99.css!./resources/js/Pages/Auth/RegisterTwo.svelte":
-/*!*************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./resources/js/Pages/Auth/RegisterTwo.svelte.99.css!=!./node_modules/svelte-loader/index.js?cssPath=C:/xampp/htdocs/sennovalab/resources/js/Pages/Auth/RegisterTwo.svelte.99.css!./resources/js/Pages/Auth/RegisterTwo.svelte ***!
-  \*************************************************************************************************************************************************************************************************************************************/
+/***/ "./resources/js/Pages/Auth/RegisterTwo.svelte.102.css!=!./node_modules/svelte-loader/index.js?cssPath=C:/xampp/htdocs/sennovalab/resources/js/Pages/Auth/RegisterTwo.svelte.102.css!./resources/js/Pages/Auth/RegisterTwo.svelte":
+/*!***************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./resources/js/Pages/Auth/RegisterTwo.svelte.102.css!=!./node_modules/svelte-loader/index.js?cssPath=C:/xampp/htdocs/sennovalab/resources/js/Pages/Auth/RegisterTwo.svelte.102.css!./resources/js/Pages/Auth/RegisterTwo.svelte ***!
+  \***************************************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -16417,7 +16417,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_node_modules_svelte_loader_index_js_cssPath_C_xampp_htdocs_sennovalab_resources_js_Pages_Auth_RegisterTwo_svelte_99_css_RegisterTwo_svelte__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!../../../../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!../../../../node_modules/svelte-loader/index.js?cssPath=C:/xampp/htdocs/sennovalab/resources/js/Pages/Auth/RegisterTwo.svelte.99.css!./RegisterTwo.svelte */ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./node_modules/svelte-loader/index.js?cssPath=C:/xampp/htdocs/sennovalab/resources/js/Pages/Auth/RegisterTwo.svelte.99.css!./resources/js/Pages/Auth/RegisterTwo.svelte");
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_node_modules_svelte_loader_index_js_cssPath_C_xampp_htdocs_sennovalab_resources_js_Pages_Auth_RegisterTwo_svelte_102_css_RegisterTwo_svelte__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!../../../../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!../../../../node_modules/svelte-loader/index.js?cssPath=C:/xampp/htdocs/sennovalab/resources/js/Pages/Auth/RegisterTwo.svelte.102.css!./RegisterTwo.svelte */ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./node_modules/svelte-loader/index.js?cssPath=C:/xampp/htdocs/sennovalab/resources/js/Pages/Auth/RegisterTwo.svelte.102.css!./resources/js/Pages/Auth/RegisterTwo.svelte");
 
             
 
@@ -16426,11 +16426,11 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_node_modules_svelte_loader_index_js_cssPath_C_xampp_htdocs_sennovalab_resources_js_Pages_Auth_RegisterTwo_svelte_99_css_RegisterTwo_svelte__WEBPACK_IMPORTED_MODULE_1__["default"], options);
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_node_modules_svelte_loader_index_js_cssPath_C_xampp_htdocs_sennovalab_resources_js_Pages_Auth_RegisterTwo_svelte_102_css_RegisterTwo_svelte__WEBPACK_IMPORTED_MODULE_1__["default"], options);
 
 
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_node_modules_svelte_loader_index_js_cssPath_C_xampp_htdocs_sennovalab_resources_js_Pages_Auth_RegisterTwo_svelte_99_css_RegisterTwo_svelte__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_node_modules_svelte_loader_index_js_cssPath_C_xampp_htdocs_sennovalab_resources_js_Pages_Auth_RegisterTwo_svelte_102_css_RegisterTwo_svelte__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
 
 /***/ }),
 
@@ -40383,7 +40383,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var svelte_grid_responsive__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! svelte-grid-responsive */ "./node_modules/svelte-grid-responsive/dist/Grid.svelte");
 /* harmony import */ var C_xampp_htdocs_sennovalab_node_modules_svelte_loader_lib_hot_api_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./node_modules/svelte-loader/lib/hot-api.js */ "./node_modules/svelte-loader/lib/hot-api.js");
 /* harmony import */ var C_xampp_htdocs_sennovalab_node_modules_svelte_hmr_runtime_proxy_adapter_dom_js__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./node_modules/svelte-hmr/runtime/proxy-adapter-dom.js */ "./node_modules/svelte-hmr/runtime/proxy-adapter-dom.js");
-/* harmony import */ var C_xampp_htdocs_sennovalab_resources_js_Pages_Auth_RegisterTwo_svelte_99_css_svelte_loader_cssPath_C_xampp_htdocs_sennovalab_resources_js_Pages_Auth_RegisterTwo_svelte_99_css_C_xampp_htdocs_sennovalab_resources_js_Pages_Auth_RegisterTwo_svelte__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./resources/js/Pages/Auth/RegisterTwo.svelte.99.css!=!svelte-loader?cssPath=C:/xampp/htdocs/sennovalab/resources/js/Pages/Auth/RegisterTwo.svelte.99.css!./resources/js/Pages/Auth/RegisterTwo.svelte */ "./resources/js/Pages/Auth/RegisterTwo.svelte.99.css!=!./node_modules/svelte-loader/index.js?cssPath=C:/xampp/htdocs/sennovalab/resources/js/Pages/Auth/RegisterTwo.svelte.99.css!./resources/js/Pages/Auth/RegisterTwo.svelte");
+/* harmony import */ var C_xampp_htdocs_sennovalab_resources_js_Pages_Auth_RegisterTwo_svelte_102_css_svelte_loader_cssPath_C_xampp_htdocs_sennovalab_resources_js_Pages_Auth_RegisterTwo_svelte_102_css_C_xampp_htdocs_sennovalab_resources_js_Pages_Auth_RegisterTwo_svelte__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./resources/js/Pages/Auth/RegisterTwo.svelte.102.css!=!svelte-loader?cssPath=C:/xampp/htdocs/sennovalab/resources/js/Pages/Auth/RegisterTwo.svelte.102.css!./resources/js/Pages/Auth/RegisterTwo.svelte */ "./resources/js/Pages/Auth/RegisterTwo.svelte.102.css!=!./node_modules/svelte-loader/index.js?cssPath=C:/xampp/htdocs/sennovalab/resources/js/Pages/Auth/RegisterTwo.svelte.102.css!./resources/js/Pages/Auth/RegisterTwo.svelte");
 /* module decorator */ module = __webpack_require__.hmd(module);
 /* resources\js\Pages\Auth\RegisterTwo.svelte generated by Svelte v3.48.0 */
 
@@ -40444,33 +40444,33 @@ function create_default_slot_3(ctx) {
 		c() {
 			div8 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
 
-			div8.innerHTML = `<div class="wrapper svelte-1dxnokn"><form action="" class="form svelte-1dxnokn"><h1 class="title svelte-1dxnokn">Registarse</h1> 
+			div8.innerHTML = `<div class="wrapper svelte-ih3pwe"><form action="" class="form svelte-ih3pwe"><h1 class="title svelte-ih3pwe">Registarse</h1> 
 
-                        <div class="inputContainer svelte-1dxnokn"><input type="text" class="input svelte-1dxnokn" placeholder="a"/> 
-                            <label for="" class="label svelte-1dxnokn">Nombre Completo</label></div> 
+                        <div class="inputContainer svelte-ih3pwe"><input type="text" class="input svelte-ih3pwe" placeholder="a"/> 
+                            <label for="" class="label svelte-ih3pwe">Nombre Completo</label></div> 
 
-                        <div class="inputContainer svelte-1dxnokn"><input type="text" class="input svelte-1dxnokn" placeholder="a"/> 
-                            <label for="" class="label svelte-1dxnokn">Tipo de documento</label></div> 
+                        <div class="inputContainer svelte-ih3pwe"><input type="text" class="input svelte-ih3pwe" placeholder="a"/> 
+                            <label for="" class="label svelte-ih3pwe">Tipo de documento</label></div> 
 
-                        <div class="inputContainer svelte-1dxnokn"><input type="text" class="input svelte-1dxnokn" placeholder="a"/> 
-                            <label for="" class="label svelte-1dxnokn">Número de documento</label></div> 
+                        <div class="inputContainer svelte-ih3pwe"><input type="text" class="input svelte-ih3pwe" placeholder="a"/> 
+                            <label for="" class="label svelte-ih3pwe">Número de documento</label></div> 
 
-                        <div class="inputContainer svelte-1dxnokn"><input type="text" class="input svelte-1dxnokn" placeholder="a"/> 
-                            <label for="" class="label svelte-1dxnokn">Correo electrónico</label></div> 
+                        <div class="inputContainer svelte-ih3pwe"><input type="text" class="input svelte-ih3pwe" placeholder="a"/> 
+                            <label for="" class="label svelte-ih3pwe">Correo electrónico</label></div> 
 
-                        <div class="inputContainer svelte-1dxnokn"><input type="text" class="input svelte-1dxnokn" placeholder="a"/> 
-                            <label for="" class="label svelte-1dxnokn">Celular / Teléfono</label></div> 
+                        <div class="inputContainer svelte-ih3pwe"><input type="text" class="input svelte-ih3pwe" placeholder="a"/> 
+                            <label for="" class="label svelte-ih3pwe">Celular / Teléfono</label></div> 
 
-                        <div class="inputContainer svelte-1dxnokn"><input type="text" class="input svelte-1dxnokn" placeholder="a"/> 
-                            <label for="" class="label svelte-1dxnokn">Contraseña</label></div> 
+                        <div class="inputContainer svelte-ih3pwe"><input type="text" class="input svelte-ih3pwe" placeholder="a"/> 
+                            <label for="" class="label svelte-ih3pwe">Contraseña</label></div> 
 
-                        <div class="inputContainer svelte-1dxnokn"><input type="text" class="input svelte-1dxnokn" placeholder="a"/> 
-                            <label for="" class="label svelte-1dxnokn">Repita la contraseña</label></div> 
+                        <div class="inputContainer svelte-ih3pwe"><input type="text" class="input svelte-ih3pwe" placeholder="a"/> 
+                            <label for="" class="label svelte-ih3pwe">Repita la contraseña</label></div> 
 
-                        <input type="submit" class="submitBtn svelte-1dxnokn" value="Registrarse"/> 
-                        <input type="submit" class="submitBtn2 svelte-1dxnokn" value="Regresar"/></form></div>`;
+                        <input type="submit" class="submitBtn svelte-ih3pwe" value="Registrarse"/> 
+                        <input type="submit" class="submitBtn2 svelte-ih3pwe" value="Regresar"/></form></div>`;
 
-			(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div8, "class", "signupFrm svelte-1dxnokn");
+			(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div8, "class", "signupFrm svelte-ih3pwe");
 		},
 		m(target, anchor) {
 			(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, div8, anchor);
@@ -40668,9 +40668,9 @@ function create_fragment(ctx) {
 			div1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
 			(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.create_component)(grid1.$$.fragment);
 			(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(div0, "background-color", "white");
-			(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div0, "class", "svelte-1dxnokn");
+			(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div0, "class", "svelte-ih3pwe");
 			(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(div1, "background-color", "white");
-			(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div1, "class", "svelte-1dxnokn");
+			(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div1, "class", "svelte-ih3pwe");
 		},
 		m(target, anchor) {
 			(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, div0, anchor);
