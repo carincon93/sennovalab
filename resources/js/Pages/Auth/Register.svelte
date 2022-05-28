@@ -57,6 +57,7 @@
         tipo_usuario: '',
         empresa_centro_formacion: '',
         nit_rut: '',
+        digito_verificacion: '',
         password: '',
         password_confirmation: '',
         autorizacion_datos: false,
@@ -143,9 +144,16 @@
                     <Input id="empresa_centro_formacion" type="text" bind:value={$form.empresa_centro_formacion} error={errors.empresa_centro_formacion} required />
                 </div>
 
-                <div class="mb-10">
-                    <Label required class="mb-10" labelFor="nit_rut" value="NIT / RUT" />
-                    <Input id="nit_rut" type="text" bind:value={$form.nit_rut} error={errors.nit_rut} required />
+                <div class="mb-10 grid gap-2 grid-cols-2">
+                    <div>
+                        <Label required class="mb-10" labelFor="nit_rut" value="NIT / RUT" />
+                        <Input id="nit_rut" type="text" bind:value={$form.nit_rut} error={errors.nit_rut} required />
+                    </div>
+
+                    <div>
+                        <Label required class="mb-10" labelFor="digito_verificacion" value="Dígito de verificación" />
+                        <Input id="digito_verificacion" type="number" input$min="0" input$max="9" bind:value={$form.digito_verificacion} error={errors.digito_verificacion} required />
+                    </div>
                 </div>
             </div>
 
