@@ -56,7 +56,9 @@
         "post-install-cmd": [
             "php artisan clear-compiled",
             "chmod -R 777 public/",
-            "ln -sr storage/app/public public/storage"
+            "ln -sr storage/app/public public/storage",
+            "npm run prod",
+            "php artisan config:clear"
         ],
         "postinstall": "npm run prod"
     },
