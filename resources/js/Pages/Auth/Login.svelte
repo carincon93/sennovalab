@@ -44,12 +44,14 @@
     <title>Ingresar - SGPS-SIPRO</title>
 
     <style>
-        .mdc-checkbox .mdc-checkbox__native-control:enabled:not(:checked):not(:indeterminate):not([data-indeterminate='true']) ~ .mdc-checkbox__background {
-            border-color: white;
-        }
+        @media (min-width: 1024px) {
+            .mdc-checkbox .mdc-checkbox__native-control:enabled:not(:checked):not(:indeterminate):not([data-indeterminate='true']) ~ .mdc-checkbox__background {
+                border-color: white;
+            }
 
-        .mdc-button--outlined:not(:disabled) {
-            border: none;
+            .mdc-button--outlined:not(:disabled) {
+                border: none;
+            }
         }
     </style>
 </svelte:head>
@@ -60,27 +62,27 @@
     </div>
 {/if}
 
-<div class="flex flex-col form-wrapper justify-center min-h-[85vh] w-full">
-    <div class="w-[35%] mx-auto ml-[10rem]">
+<div class="lg:flex flex-col form-wrapper justify-center lg:min-h-[85vh] w-full p-8 lg:p-0">
+    <div class="lg:w-[35%] mx-auto lg:ml-[10rem]">
         <form on:submit|preventDefault={handleSubmit}>
             <div>
-                <Label required labelFor="email" value={$_('Email')} class="text-white mb-4" />
+                <Label required labelFor="email" value={$_('Email')} class="lg:text-white mb-4" />
                 <Input id="email" type="email" bind:value={$form.email} error={errors.email} required autocomplete="email" />
             </div>
 
             <div class="mt-4">
-                <Label required value={$_('Password')} labelFor="password" class="text-white mb-4" />
+                <Label required value={$_('Password')} labelFor="password" class="lg:text-white mb-4" />
                 <Password id="password" class="mt-1 w-full" bind:value={$form.password} error={errors.password} required autocomplete="current-password" />
             </div>
 
             <div class="block mt-4">
                 <FormField>
                     <Checkbox bind:checked={$form.remember} class="login-checkbox" value={selection} />
-                    <span slot="label" class="text-white">{$_('Remember me')}</span>
+                    <span slot="label" class="lg:text-white">{$_('Remember me')}</span>
                 </FormField>
             </div>
 
-            <a use:inertia href={route('password.request')} class="my-10 text-center text-white hover:opacity-80 block">
+            <a use:inertia href={route('password.request')} class="my-10 text-center lg:text-white hover:opacity-80 block">
                 {$_('Forgot your password?')}
             </a>
 
@@ -93,8 +95,10 @@
 </div>
 
 <style>
-    .form-wrapper {
-        background: url(/images/fondo-login.png) center center no-repeat;
-        background-size: cover;
+    @media (min-width: 1024px) {
+        .form-wrapper {
+            background: url(/images/fondo-login.png) center center no-repeat;
+            background-size: cover;
+        }
     }
 </style>

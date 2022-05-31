@@ -1,1 +1,0 @@
-<script>import { inertia } from '@inertiajs/inertia-svelte'</script>

@@ -2,8 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
-use App\Http\Controllers\LineaInvestigacionController;
-
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,8 +15,6 @@ use App\Http\Controllers\LineaInvestigacionController;
 |
 */
 
-Route::resource('/lineas-investigacion', LineaInvestigacionController::class)->parameters(['lineas-investigacion' => 'linea-investigacion']);
-
 Route::get('/', function () {
     return Inertia::render('Welcome');
 });
@@ -26,6 +23,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/', function () {
         return Inertia::render('Dashboard');
     })->name('dashboard');
+
+    Route::resource('/users', UserController::class)->parameters(['users' => 'user']);
 });
 
 require __DIR__ . '/auth.php';
