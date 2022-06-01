@@ -74,7 +74,7 @@ class {{ class }} extends Model
     {
         // En el where reemplazar 'Nombre columna' por el nombre de la columna a filtrar
         $query->when($filters['search'] ?? null, function ($query, $search) {
-            $query->where('Nombre columna', 'ilike', '%'.$search.'%');
+            $query->where('Nombre columna', 'like', '%'.$search.'%');
         });
     }
 }

@@ -1,0 +1,10 @@
+1. Siempre ejecutar npm run watch
+2. php artisan make:crud NombreModelo
+3. Base de datos en Heroku
+
+DB_CONNECTION=mysql
+DB_HOST=us-cdbr-east-05.cleardb.net
+DB_PORT=3306
+DB_DATABASE=heroku_e82d4434e57f563
+DB_USERNAME=b638f1a762620b
+DB_PASSWORD=820177b9

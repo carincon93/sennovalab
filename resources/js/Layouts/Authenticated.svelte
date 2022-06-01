@@ -124,7 +124,7 @@
             <ul>
                 <li class="uppercase text-gray-500 text-xs mb-6{showingNavigationDropdown ? '' : ' hidden'}">Menu</li>
                 <li>
-                    <a href="#" class="flex items-center">
+                    <a use:inertia href={route('users.index')} class="flex items-center">
                         <div class="inline-block rounded-md border border-violet-400">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 11.2" class="w-5" style="margin: 4.02px 2px;">
                                 <g id="a" />
