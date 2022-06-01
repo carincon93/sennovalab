@@ -6,6 +6,9 @@
 
     import Form from './Form'
 
+    /**
+     * Datos que llegan desde el controlador - backend
+     */
     export let errors
     export let user
 
@@ -21,10 +24,13 @@
 
     let roles_sennovalab = [{ value: 1, label: 'Líder de laboratorio' }]
 
+    /**
+     * Título para la pestaña del navegador
+     */
     $: $title = 'Editar ' + user.primer_nombre
 
     /**
-     * Permisos
+     * Validar si el usuario autenticado es SuperAdmin
      */
     // let authUser = $page.props.auth.user
     // let isSuperAdmin = checkRole(authUser, [1])

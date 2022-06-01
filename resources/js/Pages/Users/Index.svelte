@@ -12,12 +12,18 @@
     import Dialog from '@/Shared/Dialog'
     import { Item, Text } from '@smui/list'
 
+    /**
+     * Datos que llegan desde el controlador - backend
+     */
     export let users
 
+    /**
+     * Título para la pestaña del navegador
+     */
     $title = 'Usuarios'
 
     /**
-     * Permisos
+     * Validar si el usuario autenticado es SuperAdmin
      */
     // let authUser = $page.props.auth.user
     // let isSuperAdmin = checkRole(authUser, [1])

@@ -5,13 +5,20 @@
     import Label from '@/Shared/Label'
     import LoadingButton from '@/Shared/LoadingButton'
 
+    /**
+     * Datos que llegan desde el componente padre (Create-Edit)
+     */
+    //
     export let submit
-    // export let authUser
+    export let authUser
     export let sending
     export let errors
     export let form
     export let method
 
+    /**
+     * Validar si el usuario autenticado es SuperAdmin
+     */
     // let isSuperAdmin = checkRole(authUser, [1])
 </script>
 

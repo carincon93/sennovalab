@@ -24,17 +24,17 @@ class UserRequest extends FormRequest
     public function rules()
     {
         return [
-            'primer_nombre' => ['required', 'string', 'max:255'],
-            'segundo_nombre' => ['nullable', 'string', 'max:255'],
-            'primer_apellido' => ['required', 'string', 'max:255'],
-            'segundo_apellido' => ['nullable', 'string', 'max:255'],
-            'email' => ['required', 'email', 'max:255'],
-            'tipo_documento' => ['required', 'string', 'max:50'],
-            'numero_documento' => ['required', 'integer', 'min:0', 'max:9223372036854775807'],
-            'celular' => ['required', 'integer', 'min:0', 'max:9223372036854775807'],
-            'telefono' => ['required', 'string', 'max:50'],
-            'extension' => ['nullable', 'string', 'max:50'],
-            'autorizacion_datos' => ['required', 'boolean'],
+            'primer_nombre'         => ['required', 'string', 'max:255'],
+            'segundo_nombre'        => ['nullable', 'string', 'max:255'],
+            'primer_apellido'       => ['required', 'string', 'max:255'],
+            'segundo_apellido'      => ['nullable', 'string', 'max:255'],
+            'email'                 => ['required', 'email', 'max:255'],
+            'tipo_documento'        => ['required', 'string', 'max:50'],
+            'numero_documento'      => ['required', 'integer', 'min:0', 'max:9223372036854775807'],
+            'celular'               => ['required', 'integer', 'min:0', 'max:9223372036854775807'],
+            'telefono'              => ['required', 'string', 'max:50'],
+            'extension'             => ['nullable', 'string', 'max:50'],
+            'autorizacion_datos'    => ['required', 'boolean'],
         ];
     }
 

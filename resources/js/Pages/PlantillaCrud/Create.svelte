@@ -6,12 +6,18 @@
 
     import Form from './Form'
 
+    /**
+     * Datos que llegan desde el controlador - backend
+     */
     export let errors
 
+    /**
+     * Título para la pestaña del navegador
+     */
     $: $title = 'Crear nombre_entidad_singular'
 
     /**
-     * Permisos
+     * Validar si el usuario autenticado es SuperAdmin
      */
     // let authUser = $page.props.auth.user
     // let isSuperAdmin = checkRole(authUser, [1])

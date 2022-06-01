@@ -49,18 +49,18 @@ class UserController extends Controller
         // $this->authorize('create', [User::class]);
 
         $user = new User();
-        $user->primer_nombre = $request->primer_nombre;
-        $user->segundo_nombre = $request->segundo_nombre;
-        $user->primer_apellido = $request->primer_apellido;
-        $user->segundo_apellido = $request->segundo_apellido;
-        $user->email = $request->email;
-        $user->password = $user::makePassword($request->numero_documento);
-        $user->tipo_documento = $request->tipo_documento;
-        $user->numero_documento = $request->numero_documento;
-        $user->celular = $request->celular;
-        $user->telefono = $request->telefono;
-        $user->extension = $request->extension;
-        $user->autorizacion_datos = $request->autorizacion_datos;
+        $user->primer_nombre        = $request->primer_nombre;
+        $user->segundo_nombre       = $request->segundo_nombre;
+        $user->primer_apellido      = $request->primer_apellido;
+        $user->segundo_apellido     = $request->segundo_apellido;
+        $user->email                = $request->email;
+        $user->password             = $user::makePassword($request->numero_documento);
+        $user->tipo_documento       = $request->tipo_documento;
+        $user->numero_documento     = $request->numero_documento;
+        $user->celular              = $request->celular;
+        $user->telefono             = $request->telefono;
+        $user->extension            = $request->extension;
+        $user->autorizacion_datos   = $request->autorizacion_datos;
 
         $user->save();
 
@@ -108,16 +108,16 @@ class UserController extends Controller
     {
         // $this->authorize('update', [User::class, $user]);
 
-        $user->primer_nombre = $request->primer_nombre;
-        $user->segundo_nombre = $request->segundo_nombre;
-        $user->primer_apellido = $request->primer_apellido;
-        $user->segundo_apellido = $request->segundo_apellido;
-        $user->email = $request->email;
-        $user->tipo_documento = $request->tipo_documento;
-        $user->numero_documento = $request->numero_documento;
-        $user->celular = $request->celular;
-        $user->telefono = $request->telefono;
-        $user->extension = $request->extension;
+        $user->primer_nombre        = $request->primer_nombre;
+        $user->segundo_nombre       = $request->segundo_nombre;
+        $user->primer_apellido      = $request->primer_apellido;
+        $user->segundo_apellido     = $request->segundo_apellido;
+        $user->email                = $request->email;
+        $user->tipo_documento       = $request->tipo_documento;
+        $user->numero_documento     = $request->numero_documento;
+        $user->celular              = $request->celular;
+        $user->telefono             = $request->telefono;
+        $user->extension            = $request->extension;
 
         $user->save();
 

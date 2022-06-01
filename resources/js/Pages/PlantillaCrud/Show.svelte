@@ -4,12 +4,18 @@
     import { route, checkRole, checkPermission } from '@/Utils'
     import { _ } from 'svelte-i18n'
 
+    /**
+     * Datos que llegan desde el controlador - backend
+     */
     export let nombre_entidad_singular
 
+    /**
+     * Título para la pestaña del navegador
+     */
     $: $title = 'Detalles del nombre_entidad_singular'
 
     /**
-     * Permisos
+     * Validar si el usuario autenticado es SuperAdmin
      */
     // let authUser = $page.props.auth.user
     // let isSuperAdmin = checkRole(authUser, [1])
