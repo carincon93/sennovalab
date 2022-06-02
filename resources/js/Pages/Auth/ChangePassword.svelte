@@ -49,7 +49,7 @@
                 </div>
             </fieldset>
             <div class="px-8 py-4 bg-gray-100 border-t border-gray-200 flex items-center sticky bottom-0">
-                <LoadingButton bind:loading={sending} class="btn-indigo" type="submit" bind:disabled={$form.autorizacion_datos}>Cambiar contraseña</LoadingButton>
+                <LoadingButton bind:loading={sending} type="submit" bind:disabled={$form.autorizacion_datos}>Cambiar contraseña</LoadingButton>
             </div>
         </form>
     </div>

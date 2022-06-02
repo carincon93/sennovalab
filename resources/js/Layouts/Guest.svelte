@@ -14,15 +14,18 @@
     <title>{$title ? `${$title} - SGPS-SIPRO` : 'SGPS-SIPRO'}</title>
 </svelte:head>
 
-<div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-200">
-    <div>
-        <a use:inertia href={route('login')} class="flex items-center justify-center text-orangered-600 text-xl">
-            <ApplicationLogo class="w-5/6 fill-current text-gray-500" />
-        </a>
-    </div>
-
-    <div class="w-full sm:max-w-md px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg">
-        <slot />
-    </div>
+<div class="min-h-screen">
+    <slot />
     <FlashMessages />
+
+    <footer class="py-4 bg-white">
+        <div class="grid grid-cols-3 gap-2 p-2 justify-center items-center">
+            <img class="m-auto" src="/images/sena-logo.png" alt="" />
+            <img class="m-auto" src="/images/grindda-logo.png" alt="" />
+            <img class="m-auto" src="/images/sennovalab-logo.png" alt="" />
+        </div>
+        <div class="pl-6 border-black border-l-2 mt-6">
+            <p class="text-center">SENA / Regional Caldas / Centro de Procesos Industriales y Construcción <br /> Kilómetro 10 Vía al Magdalena Bloque 3 –SENNOVALAB I+D+i – Ambiente de Servicios Tecnológicos <br /> PBX 8748444 Extensión 62441 - 62313 <br /> <a href="mailto:sennovalab@sena.edu.co">sennovalab@sena.edu.co</a></p>
+        </div>
+    </footer>
 </div>

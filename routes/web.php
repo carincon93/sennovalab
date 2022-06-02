@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,6 +23,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/', function () {
         return Inertia::render('Dashboard');
     })->name('dashboard');
+
+    Route::resource('/users', UserController::class)->parameters(['users' => 'user']);
 });
 
 require __DIR__ . '/auth.php';

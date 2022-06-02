@@ -4,8 +4,8 @@
 @import 'tailwindcss/utilities';
 
 :root {
-    --mdc-theme-primary: #14a0fe;
-    --mdc-theme-secondary: #207ebd;
+    --mdc-theme-primary: #ff6719;
+    --mdc-theme-secondary: #db520e;
     --mdc-theme-error: #d93025;
 }
 
@@ -14,6 +14,7 @@ html {
 }
 
 body {
+    background-color: white;
     min-height: 100%;
 }
 
@@ -175,5 +176,5 @@ fieldset[disabled] .bg-white.mdc-text-field.mdc-text-field--label-floating {
 }
 
 .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {
-    color: #14a0fe;
+    color: #ff6719;
 }

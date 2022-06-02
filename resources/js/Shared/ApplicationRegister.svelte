@@ -4,4 +4,4 @@
     }
 </script>
 
-<img src={window.basePath + '/images/Registro.png'} {...props} alt="Logo" />
+<img src={window.basePath + '/images/logo.jpeg'} {...props} alt="Logo" />
