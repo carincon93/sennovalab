@@ -10,10 +10,11 @@
      * Datos que llegan desde el controlador - backend
      */
     export let errors
+    export let roles_sennovalab
 
     let tipos_documento = [
-        { value: 'Cédula de ciudadanía', label: 'Cédula de ciudadanía' },
-        { value: 'Cédula de extranjería', label: 'Cédula de extranjería' },
+        { value: 'cc', label: 'Cédula de ciudadanía' },
+        { value: 'ce', label: 'Cédula de extranjería' },
     ]
 
     let tipos_afiliacion = [
@@ -21,7 +22,10 @@
         { value: 'Contratista', label: 'Contratista' },
     ]
 
-    let roles_sennovalab = [{ value: 1, label: 'Líder de laboratorio' }]
+    let estados = [
+        { value: 1, label: 'Activo' },
+        { value: 2, label: 'Inactivo' },
+    ]
 
     /**
      * Título para la pestaña del navegador
@@ -47,21 +51,28 @@
         celular: '',
         telefono: '',
         extension: '',
-        autorizacion_datos: false,
+        estado: '',
+        autorizacion_tratamiento_datos: false,
 
+        tipo_afiliacion: '',
         numero_contrato: '',
         fecha_inicio_contrato: '',
         fecha_finalizacion_contrato: '',
-        rol_sennovalab: null,
+        rol_id: null,
         firma_digital: '',
-        autorizacion_datos: false,
     })
 
     function submit() {
-        $form.post(route('users.store'), {
+        $form.post(route('users-internos.store'), {
             onStart: () => (sending = true),
             onFinish: () => (sending = false),
         })
+    }
+
+    $: if ($form.tipo_afiliacion?.value == 'Personal planta') {
+        $form.numero_contrato = ''
+        $form.fecha_inicio_contrato = ''
+        $form.fecha_finalizacion_contrato = ''
     }
 </script>
 
@@ -84,7 +95,7 @@
             <p class="mt-1 text-sm text-gray-600">Ingrese la siguiente información para crear un nuevo usuario.</p>
         </div>
         <div class="col-span-2">
-            <Form {errors} {submit} {tipos_documento} {tipos_afiliacion} {roles_sennovalab} {sending} {form} />
+            <Form {errors} {submit} {tipos_documento} {tipos_afiliacion} {estados} {roles_sennovalab} {sending} {form} />
         </div>
     </div>
 </AuthenticatedLayout>

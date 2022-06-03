@@ -23,6 +23,7 @@
     export let tipos_documento
     export let tipos_afiliacion
     export let roles_sennovalab
+    export let estados
 
     /**
      * Validar si el usuario autenticado es SuperAdmin
@@ -113,12 +114,17 @@
         {/if}
 
         <div class="mt-10">
-            <Label required labelFor="rol_sennovalab" value="Rol SENNOVALAB" />
-            <Select id="rol_sennovalab" error={errors.rol_sennovalab} required placeholder="Seleccione un rol SENNOVALAB" items={roles_sennovalab} bind:selectedValue={$form.rol_sennovalab} />
+            <Label required labelFor="rol_id" value="Rol SENNOVALAB" />
+            <Select id="rol_id" error={errors.rol_id} required placeholder="Seleccione un rol SENNOVALAB" items={roles_sennovalab} bind:selectedValue={$form.rol_id} />
         </div>
 
         <div class="mt-10">
-            <Label required={method != 'put' ? 'required' : undefined} labelFor="firma_digital" value="Firma digital" />
+            <Label required labelFor="estado" value="Estado" />
+            <Select id="estado" error={errors.estado} required placeholder="Seleccione un estado" items={estados} bind:selectedValue={$form.estado} />
+        </div>
+
+        <div class="mt-10">
+            <Label required={method != 'put' ? 'required' : undefined} labelFor="firma_digital" value="Firma digital (.png, .jpeg, .bmp)" class="mb-4" />
             <File id="firma_digital" accept=".jpeg,.bmp,.png" bind:value={$form.firma_digital} error={errors.firma_digital} maxSize={5000} required={method != 'put' ? 'required' : undefined} />
         </div>
 
@@ -126,8 +132,8 @@
             <div class="mt-10">
                 <InfoMessage message="Los datos proporcionados serán tratados de acuerdo con la política de tratamiento de datos personales del SENA y a la ley 1581 de 2012 (Acuerdo No. 0009 del 2016)" class="mb-4" />
                 <FormField>
-                    <Checkbox bind:checked={$form.autorizacion_datos} />
-                    <span slot="label">¿El usuario autoriza el tratamiento de mis datos personales. <a href="https://www.sena.edu.co/es-co/transparencia/Documents/proteccion_datos_personales_sena_2016.pdf" target="_blank" class="text-indigo-500">Leer acuerdo No. 0009 del 2016</a>?</span>
+                    <Checkbox bind:checked={$form.autorizacion_tratamiento_datos} />
+                    <span slot="label">¿El usuario autoriza el tratamiento de datos personales. <a href="https://www.sena.edu.co/es-co/transparencia/Documents/proteccion_datos_personales_sena_2016.pdf" target="_blank" class="text-indigo-500">Leer acuerdo No. 0009 del 2016</a>?</span>
                 </FormField>
             </div>
         {/if}
@@ -142,6 +148,6 @@
         {/if}
     </fieldset>
     <div class="mt-10 px-8 py-4 flex items-center sticky bottom-0">
-        <LoadingButton loading={sending} disabled={$form.autorizacion_datos} class="ml-auto" type="submit">Guardar</LoadingButton>
+        <LoadingButton loading={sending} disabled={$form.autorizacion_tratamiento_datos} class="ml-auto" type="submit">Guardar</LoadingButton>
     </div>
 </form>

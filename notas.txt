@@ -8,3 +8,7 @@ DB_PORT=3306
 DB_DATABASE=heroku_e82d4434e57f563
 DB_USERNAME=b638f1a762620b
 DB_PASSWORD=820177b9
+
+
+'fecha_inico_contrato'              => ['required', 'date', 'date_format:Y-m-d', 'before:fecha_finalizacion_contrato'],
+'fecha_finalizacion_contrato'       => ['required', 'date', 'date_format:Y-m-d', 'after:fecha_inico_contrato'],

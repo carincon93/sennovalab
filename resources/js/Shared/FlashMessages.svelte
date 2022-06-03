@@ -4,6 +4,8 @@
     import { fly } from 'svelte/transition'
     import { quintOut } from 'svelte/easing'
 
+    export let guest
+
     let showSuccessMessage = false
     let showErrorMessage = false
 
@@ -43,7 +45,7 @@
 
 {#if showSuccessMessage && successMessage}
     <div
-        class="mb-8 flex items-center justify-between bg-green-500 rounded max-w-md fixed -bottom-0 z-index-full"
+        class="mb-8 flex items-center justify-between bg-green-500 rounded max-w-md {guest ? 'left-10' : ''} fixed -bottom-0 z-index-full"
         transition:fly={{
             delay: 250,
             duration: 300,
@@ -66,7 +68,7 @@
 
 {#if (showErrorMessage && errorMessage) || (Object.keys(errors).length > 0 && showErrorMessage)}
     <div
-        class="mb-8 flex items-center justify-between bg-red-500 rounded max-w-3xl fixed -bottom-0 z-index-full"
+        class="mb-8 flex items-center justify-between bg-red-500 rounded max-w-3xl {guest ? 'left-10' : ''} fixed -bottom-0 z-index-full"
         transition:fly={{
             delay: 250,
             duration: 300,

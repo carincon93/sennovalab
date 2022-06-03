@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\UserRegistroExternoRequest;
 use App\Models\User;
+use App\Models\UserExterno;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
@@ -34,25 +36,41 @@ class RegisteredUserController extends Controller
      *
      * @throws \Illuminate\Validation\ValidationException
      */
-    public function store(Request $request)
+    public function store(UserRegistroExternoRequest $request)
     {
-        $request->validate([
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'confirmed', Rules\Password::defaults()],
-        ]);
-
         $user = User::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => Hash::make($request->password),
+            'primer_nombre'                     => $request->primer_nombre,
+            'segundo_nombre'                    => $request->segundo_nombre,
+            'primer_apellido'                   => $request->primer_apellido,
+            'segundo_apellido'                  => $request->segundo_apellido,
+            'email'                             => $request->email,
+            'password'                          => Hash::make($request->password),
+            'tipo_documento'                    => $request->tipo_documento,
+            'numero_documento'                  => $request->numero_documento,
+            'celular'                           => $request->celular,
+            'telefono'                          => $request->telefono,
+            'extension'                         => $request->extension,
+            'estado'                            => 0,
+            'autorizacion_tratamiento_datos'    => $request->autorizacion_tratamiento_datos,
         ]);
 
-        event(new Registered($user));
+        $user_externo = new UserExterno();
+        $user_externo->codigo_cliente            = $user_externo::makeCodigo($user->id, $user->created_at);
+        $user_externo->tipo_usuario              = $request->tipo_usuario;
+        $user_externo->empresa_centro_formacion  = $request->empresa_centro_formacion;
+        $user_externo->nit_rut                   = $request->nit_rut;
+        $user_externo->digito_verificacion       = $request->digito_verificacion;
+        $user_externo->user()->associate($user);
+        $user_externo->save();
 
-        Auth::login($user);
+        $user_externo->user->syncRoles(3);
 
-        return redirect(RouteServiceProvider::HOME);
+        // event(new Registered($user));
+
+        // Auth::login($user);
+
+        // return redirect(RouteServiceProvider::HOME);
+        return redirect()->route('login')->with('success', 'Se ha registrado correctamente. Se ha notificado al administrador del sistema para que habilite su usuario.');
     }
 
     public function registerInt()

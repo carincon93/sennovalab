@@ -16,7 +16,7 @@
 
 <div class="min-h-screen">
     <slot />
-    <FlashMessages />
+    <FlashMessages guest={true} />
 
     <footer class="py-4 bg-white">
         <div class="grid grid-cols-3 gap-2 p-2 justify-center items-center">

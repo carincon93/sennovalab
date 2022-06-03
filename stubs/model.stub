@@ -46,7 +46,7 @@ class {{ class }} extends Model
     /**
      * Relationship with FirstRelatedModel
      *
-     * @return void
+     * @return object
      */
     public function firstRelatedModel()
     {
@@ -56,7 +56,7 @@ class {{ class }} extends Model
     /**
      * Relationship with SecondRelatedModel
      *
-     * @return void
+     * @return object
      */
     public function secondRelatedModel()
     {

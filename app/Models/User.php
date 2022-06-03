@@ -37,7 +37,8 @@ class User extends Authenticatable
         'celular',
         'telefono',
         'extension',
-        'autorizacion_datos',
+        'estado',
+        'autorizacion_tratamiento_datos',
     ];
     /**
      * The attributes that should be hidden for serialization.
@@ -57,6 +58,26 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /**
+     * Relationship with UserInterno
+     *
+     * @return object
+     */
+    public function userInterno()
+    {
+        return $this->hasOne(UserInterno::class);
+    }
+
+    /**
+     * Relationship with UserExterno
+     *
+     * @return object
+     */
+    public function userExterno()
+    {
+        return $this->hasOne(UserExterno::class);
+    }
 
     /**
      * Filtrar registros
@@ -82,5 +103,10 @@ class User extends Authenticatable
     public static function makePassword($numero_documento)
     {
         return bcrypt("sennovalab$numero_documento*");
+    }
+
+    public function getEstadoAttribute($value)
+    {
+        return $value == 0 ? 2 : 1;
     }
 }

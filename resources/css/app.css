@@ -135,6 +135,10 @@ fieldset[disabled] .selectedItem {
     border-color: var(--mdc-theme-error, #d93025);
 }
 
+.mdc-dialog--stacked .mdc-dialog__actions.smui-dialog__actions--reversed .mdc-dialog__button:not(:last-child) {
+    margin-top: 0px;
+}
+
 .mdc-text-field--focused.mdc-text-field--invalid:not(.mdc-text-field--disabled) .mdc-floating-label {
     color: var(--mdc-theme-error, #d93025);
 }
