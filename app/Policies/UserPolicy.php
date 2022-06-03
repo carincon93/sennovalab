@@ -3,10 +3,9 @@
 namespace App\Policies;
 
 use Illuminate\Auth\Access\HandlesAuthorization;
-use App\Models\LineaInvestigacion;
 use App\Models\User;
 
-class LineaInvestigacionPolicy
+class UserPolicy
 {
     use HandlesAuthorization;
 
@@ -18,7 +17,7 @@ class LineaInvestigacionPolicy
      */
     public function viewAny(User $user)
     {
-        if ($user->hasRole([4]) || $user->getAllPermissions()->whereIn('id', [1])->count() > 0) {
+        if ( $user->hasRole([Id del rol]) || $user->getAllPermissions()->whereIn('id', [Ids de los permisos])->count() > 0 ) {
             return true;
         }
 
@@ -29,12 +28,12 @@ class LineaInvestigacionPolicy
      * Determine whether the user can view the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\LineaInvestigacion  $lineaInvestigacion
+     * @param  \App\Models\User  $model
      * @return mixed
      */
-    public function view(User $user, LineaInvestigacion $lineaInvestigacion)
+    public function view(User $user, User $model)
     {
-        if ($user->hasRole([4]) || $user->getAllPermissions()->whereIn('id', [1])->count() > 0) {
+        if ( $user->hasRole([Id del rol]) || $user->getAllPermissions()->whereIn('id', [Ids de los permisos])->count() > 0 ) {
             return true;
         }
 
@@ -49,7 +48,7 @@ class LineaInvestigacionPolicy
      */
     public function create(User $user)
     {
-        if ($user->hasRole([4]) || $user->getAllPermissions()->whereIn('id', [2])->count() > 0) {
+        if ( $user->hasRole([Id del rol]) || $user->getAllPermissions()->whereIn('id', [Ids de los permisos])->count() > 0 ) {
             return true;
         }
 
@@ -60,12 +59,12 @@ class LineaInvestigacionPolicy
      * Determine whether the user can update the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\LineaInvestigacion  $lineaInvestigacion
+     * @param  \App\Models\User  $model
      * @return mixed
      */
-    public function update(User $user, LineaInvestigacion $lineaInvestigacion)
+    public function update(User $user, User $model)
     {
-        if ($user->hasRole([4]) || $user->getAllPermissions()->whereIn('id', [3])->count() > 0) {
+        if ( $user->hasRole([Id del rol]) || $user->getAllPermissions()->whereIn('id', [Ids de los permisos])->count() > 0 ) {
             return true;
         }
 
@@ -76,12 +75,12 @@ class LineaInvestigacionPolicy
      * Determine whether the user can delete the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\LineaInvestigacion  $lineaInvestigacion
+     * @param  \App\Models\User  $model
      * @return mixed
      */
-    public function delete(User $user, LineaInvestigacion $lineaInvestigacion)
+    public function delete(User $user, User $model)
     {
-        if ($user->hasRole([4]) || $user->getAllPermissions()->whereIn('id', [4])->count() > 0) {
+        if ( $user->hasRole([Id del rol]) || $user->getAllPermissions()->whereIn('id', [Ids de los permisos])->count() > 0 ) {
             return true;
         }
 
@@ -92,10 +91,10 @@ class LineaInvestigacionPolicy
      * Determine whether the user can restore the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\LineaInvestigacion  $lineaInvestigacion
+     * @param  \App\Models\User  $model
      * @return mixed
      */
-    public function restore(User $user, LineaInvestigacion $lineaInvestigacion)
+    public function restore(User $user, User $model)
     {
         //
     }
@@ -104,10 +103,10 @@ class LineaInvestigacionPolicy
      * Determine whether the user can permanently delete the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\LineaInvestigacion  $lineaInvestigacion
+     * @param  \App\Models\User  $model
      * @return mixed
      */
-    public function forceDelete(User $user, LineaInvestigacion $lineaInvestigacion)
+    public function forceDelete(User $user, User $model)
     {
         //
     }

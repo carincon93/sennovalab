@@ -40,7 +40,7 @@ class RoleSeeder extends Seeder
 
         DB::table('roles')->insert([
             'id' => 4,
-            'name' => 'investigador',
+            'name' => 'Investigador',
             'type' => 'interno',
             'guard_name' => 'web',
             'description' => 'Usuario externo'

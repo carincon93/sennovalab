@@ -1,12 +1,18 @@
 <script>
+    import { onMount } from 'svelte'
+
     export let showingNavigationDropdown
 
     $: props = {
         ...$$restProps,
     }
+
+    onMount(() => {
+        showingNavigationDropdown = body.classList.contains('vertical-collpsed')
+    })
 </script>
 
-{#if showingNavigationDropdown}
+{#if showingNavigationDropdown == false}
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 378.51 224.59" class="w-20 h-16 m-auto">
         <g id="a" />
         <g id="b">

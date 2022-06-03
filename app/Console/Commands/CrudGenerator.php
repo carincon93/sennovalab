@@ -62,6 +62,7 @@ class CrudGenerator extends Command
         File::put(base_path() . "/resources/js/Pages/{$this->folderName}/Show.svelte", "<script>import { inertia } from '@inertiajs/inertia-svelte'</script>");
         File::put(base_path() . "/resources/js/Pages/{$this->folderName}/Edit.svelte", "<script>import { inertia } from '@inertiajs/inertia-svelte'</script>");
         File::put(base_path() . "/resources/js/Pages/{$this->folderName}/Create.svelte", "<script>import { inertia } from '@inertiajs/inertia-svelte'</script>");
+        File::put(base_path() . "/resources/js/Pages/{$this->folderName}/Form.svelte", "<script>import { inertia } from '@inertiajs/inertia-svelte'</script>");
         $this->info(__("Copie y pegue el siguiente código en protected \$policies del AuthServiceProvider.php: 'App\Models\:className' => 'App\Policies\:classNamePolicy',", ['classNamePolicy' => $this->className . 'Policy', 'className' => $this->className]));
         $this->info('=======================================================================');
         $this->info('Copie y pegue el siguiente código en web.php:');

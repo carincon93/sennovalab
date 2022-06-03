@@ -9,6 +9,7 @@
     import { inertia, page } from '@inertiajs/inertia-svelte'
     import { route, checkRole, checkPermission } from '@/Utils'
     import { _ } from 'svelte-i18n'
+    import { onMount } from 'svelte'
 
     import ApplicationLogo from '@/Shared/ApplicationLogo'
     import Dropdown from '@/Shared/Dropdown'
@@ -28,6 +29,12 @@
     })
     Inertia.on('finish', () => {
         loading = true
+    })
+
+    onMount(() => {
+        // if (body.classList.contains('mdc-dialog-scroll-lock')) {
+        body.classList.remove('mdc-dialog-scroll-lock')
+        // }
     })
 
     let body = document.getElementById('body')
@@ -50,15 +57,20 @@
         }
 
         .vertical-collpsed .vertical-menu {
-            position: absolute;
+            position: fixed;
             width: 70px !important;
             z-index: 5;
+        }
+
+        .vertical-collpsed .nav-menu-title,
+        .vertical-collpsed .nav-option-title {
+            display: none;
         }
     </style>
 </svelte:head>
 
 <div class="min-h-screen bg-gray-100">
-    <header class="navbar-header flex justify-between items-center bg-white h-16 fixed left-0 top-0 right-0">
+    <header class="navbar-header flex justify-between items-center bg-white h-16 fixed left-0 top-0 right-0 z-50">
         <!-- Primary Navigation Menu -->
 
         <div class="flex">
@@ -95,7 +107,7 @@
                 <Dropdown class="mt-1" placement="bottom-end">
                     <div class="flex items-center cursor-pointer select-none group">
                         <div class="text-gray-700 group-hover:text-indigo-600 focus:text-indigo-600 mr-1 whitespace-no-wrap">
-                            <span class="capitalize">{authUser.name}</span>
+                            <span class="capitalize">{authUser.primer_nombre + ' ' + authUser.primer_apellido}</span>
                         </div>
                         <Icon name="cheveron-down" class="w-5 h-5 group-hover:fill-indigo-600 fill-gray-700 focus:fill-indigo-600" />
                     </div>
@@ -122,9 +134,9 @@
     <div class="vertical-menu p-5">
         <nav>
             <ul>
-                <li class="uppercase text-gray-500 text-xs mb-6{showingNavigationDropdown ? '' : ' hidden'}">Menu</li>
+                <li class="uppercase text-gray-500 text-xs mb-6 nav-menu-title">Menu</li>
                 <li>
-                    <a href="#" class="flex items-center">
+                    <a use:inertia href={route('users.index')} class="flex items-center">
                         <div class="inline-block rounded-md border border-violet-400">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 11.2" class="w-5" style="margin: 4.02px 2px;">
                                 <g id="a" />
@@ -140,7 +152,7 @@
                                 </g>
                             </svg>
                         </div>
-                        <span class="text-violet-200 ml-5{showingNavigationDropdown ? '' : ' hidden'}"> Usuarios </span>
+                        <span class="text-violet-200 ml-5 nav-option-title"> Usuarios </span>
                     </a>
                 </li>
             </ul>

@@ -16,15 +16,16 @@ class UserSeeder extends Seeder
     public function run()
     {
         DB::table('users')->insert([
-            'nombres' => 'Admin',
-            'apellidos' => 'System',
-            'email' => 'adminsennovalab2022@yopmail.com',
-            'password' => Hash::make('admin123'),
-            'tipoDocumento' => 'cc',
-            'numeroDocumento' => '10000000',
-            'celular' => '3000000000',
-            'estado' => 1,
-            'autorizacion_tratamiento_datos' => 1
+            'primer_nombre'                     => 'Admin',
+            'primer_apellido'                   => 'System',
+            'email'                             => 'admin@mail.com',
+            'password'                          => Hash::make('admin123'),
+            'tipo_documento'                    => 'cc',
+            'numero_documento'                  => '10000000',
+            'celular'                           => '3000000000',
+            'telefono'                          => '8888888-8888889',
+            'estado'                            => 1,
+            'autorizacion_tratamiento_datos'    => 1
         ]);
     }
 }

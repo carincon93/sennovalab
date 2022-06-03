@@ -16,15 +16,15 @@
 
 <div class="min-h-screen">
     <slot />
-    <FlashMessages />
+    <FlashMessages guest={true} />
 
-    <footer class="flex justify-center py-4 bg-white">
-        <div class="flex">
-            <img src="/images/sena-logo.png" alt="" />
-            <img src="/images/grindda-logo.png" alt="" />
-            <img src="/images/sennovalab-logo.png" alt="" />
+    <footer class="py-4 bg-white">
+        <div class="grid grid-cols-3 gap-2 p-2 justify-center items-center">
+            <img class="m-auto" src="/images/sena-logo.png" alt="" />
+            <img class="m-auto" src="/images/grindda-logo.png" alt="" />
+            <img class="m-auto" src="/images/sennovalab-logo.png" alt="" />
         </div>
-        <div class="pl-6 border-black border-l-2">
+        <div class="pl-6 border-black border-l-2 mt-6">
             <p class="text-center">SENA / Regional Caldas / Centro de Procesos Industriales y Construcción <br /> Kilómetro 10 Vía al Magdalena Bloque 3 –SENNOVALAB I+D+i – Ambiente de Servicios Tecnológicos <br /> PBX 8748444 Extensión 62441 - 62313 <br /> <a href="mailto:sennovalab@sena.edu.co">sennovalab@sena.edu.co</a></p>
         </div>
     </footer>

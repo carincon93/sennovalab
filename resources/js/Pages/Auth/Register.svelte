@@ -19,25 +19,25 @@
 
     export let errors
 
-    let tiposDocumento = [
+    let tipos_documento = [
         {
-            value: 'Cédula de ciudadania',
+            value: 'cc',
             label: 'Cédula de ciudadania',
         },
         {
-            value: 'Cédula de extranjería',
+            value: 'ce',
             label: 'Cédula de extranjería',
         },
     ]
 
-    let tiposUsuarios = [
+    let tipos_usuarios = [
         {
-            value: 'Natural',
-            label: 'Natural',
+            value: 'Persona natural',
+            label: 'Persona natural',
         },
         {
-            value: 'Jurídica',
-            label: 'Jurídica',
+            value: 'Persona jurídica',
+            label: 'Persona jurídica',
         },
     ]
 
@@ -57,13 +57,14 @@
         tipo_usuario: '',
         empresa_centro_formacion: '',
         nit_rut: '',
+        digito_verificacion: '',
         password: '',
         password_confirmation: '',
-        autorizacion_datos: false,
+        autorizacion_tratamiento_datos: false,
     })
 
     function handleSubmit() {
-        if ($form.autorizacion_datos) {
+        if ($form.autorizacion_tratamiento_datos) {
             $form.post(route('register'))
         }
     }
@@ -102,7 +103,7 @@
 
             <div class="mb-10">
                 <Label required class="mb-5" labelFor="tipo_documento" value="Tipo de documento" />
-                <Select id="tipo_documento" items={tiposDocumento} bind:selectedValue={$form.tipo_documento} error={errors.tipo_documento} placeholder="Seleccione un tipo de documento" required />
+                <Select id="tipo_documento" items={tipos_documento} bind:selectedValue={$form.tipo_documento} error={errors.tipo_documento} placeholder="Seleccione un tipo de documento" required />
             </div>
 
             <div class="mb-10">
@@ -134,7 +135,7 @@
 
             <div class="mb-10">
                 <Label required class="mb-5" labelFor="tipo_usuario" value="Tipo de usuario" />
-                <Select id="tipo_usuario" items={tiposUsuarios} bind:selectedValue={$form.tipo_usuario} error={errors.tipo_usuario} placeholder="Seleccione un tipo de usuario" required />
+                <Select id="tipo_usuario" items={tipos_usuarios} bind:selectedValue={$form.tipo_usuario} error={errors.tipo_usuario} placeholder="Seleccione un tipo de usuario" required />
             </div>
 
             <div class="grid gap-4 grid-cols-2">
@@ -143,9 +144,16 @@
                     <Input id="empresa_centro_formacion" type="text" bind:value={$form.empresa_centro_formacion} error={errors.empresa_centro_formacion} required />
                 </div>
 
-                <div class="mb-10">
-                    <Label required class="mb-10" labelFor="nit_rut" value="NIT / RUT" />
-                    <Input id="nit_rut" type="text" bind:value={$form.nit_rut} error={errors.nit_rut} required />
+                <div class="mb-10 grid gap-2 grid-cols-2">
+                    <div>
+                        <Label required class="mb-10" labelFor="nit_rut" value="NIT / RUT" />
+                        <Input id="nit_rut" type="number" input$min="0" input$max="9223372036854775807" bind:value={$form.nit_rut} error={errors.nit_rut} required />
+                    </div>
+
+                    <div>
+                        <Label required class="mb-10" labelFor="digito_verificacion" value="Dígito de verificación" />
+                        <Input id="digito_verificacion" type="number" input$min="0" input$max="9" bind:value={$form.digito_verificacion} error={errors.digito_verificacion} required />
+                    </div>
                 </div>
             </div>
 
@@ -164,7 +172,7 @@
             <div class="block mt-4">
                 <InfoMessage message="Los datos proporcionados serán tratados de acuerdo con la política de tratamiento de datos personales del SENA y a la ley 1581 de 2012 (Acuerdo No. 0009 del 2016)" class="mb-4" />
                 <FormField>
-                    <Checkbox bind:checked={$form.autorizacion_datos} />
+                    <Checkbox bind:checked={$form.autorizacion_tratamiento_datos} />
                     <span slot="label">Autorizo el tratamiento de mis datos personales. <a href="https://www.sena.edu.co/es-co/transparencia/Documents/proteccion_datos_personales_sena_2016.pdf" target="_blank" class="text-indigo-500">Leer acuerdo No. 0009 del 2016</a></span>
                 </FormField>
             </div>
@@ -174,7 +182,7 @@
                     {$_('Already registered?')}
                 </Button>
 
-                <LoadingButton bind:loading={sending} type="submit" bind:disabled={$form.autorizacion_datos}>Registarse</LoadingButton>
+                <LoadingButton bind:loading={sending} type="submit" bind:disabled={$form.autorizacion_tratamiento_datos}>Registarse</LoadingButton>
             </div>
         </form>
     </div>
