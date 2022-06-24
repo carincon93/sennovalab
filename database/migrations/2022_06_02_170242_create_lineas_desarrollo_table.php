@@ -16,9 +16,7 @@ class CreateLineasDesarrolloTable extends Migration
         Schema::create('lineas_desarrollo', function (Blueprint $table) {
             $table->id();
             $table->string('nombre', 50);
-            $table->unsignedBigInteger('categoria_linea_desarrollo_id');
 
-            $table->foreign('categoria_linea_desarrollo_id')->references('id')->on('categorias_linea_desarrollo')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }
