@@ -15,7 +15,7 @@
     /**
      * Datos que llegan desde el controlador - backend
      */
-    export let nombre_entidad_plural
+    export let typeservices
 
     /**
      * Título para la pestaña del navegador
@@ -29,11 +29,12 @@
     // let isSuperAdmin = checkRole(authUser, [1])
 
     let filters = {}
-    let dialogOpen = false
-    let nombre_entidad_singularId
+    let dialogDeleteOpen = false
+    let dialogTypeServiceOpen = false
+    let typeservicesId
 
     function destroy() {
-        Inertia.delete(route('ruta.destroy', nombre_entidad_singularId), {
+        Inertia.delete(route('types-services.destroy', typeservicesId), {
             onSuccess: () => (dialogOpen = false),
         })
     }
@@ -41,44 +42,38 @@
 
 <AuthenticatedLayout>
     <DataTable>
-        <div slot="title">nombre_entidad_plural</div>
+        <div slot="title">Tipos de servicios</div>
 
         <div slot="actions">
-            <Button on:click={() => Inertia.visit(route('ruta.create'))} variant="raised" class="bg-orange-500">Crear nombre_entidad_singular</Button>
+            <Button on:click={() => Inertia.visit(route('types-services.create'))} variant="raised" class="bg-orange-500">Crear tipo de servicio</Button>
         </div>
 
         <thead slot="thead">
             <tr class="text-left font-bold">
-                <th class="px-6 pt-6 pb-4 sticky top-0 z-10 bg-white shadow-xl w-full"> TH1 </th>
-                <th class="px-6 pt-6 pb-4 sticky top-0 z-10 bg-white shadow-xl w-full"> TH2 </th>
+                <th class="px-6 pt-6 pb-4 sticky top-0 z-10 bg-white shadow-xl w-full"> Nombre del tipo de servicio </th>
                 <th class="bg-white pb-4 pt-6 px-6 shadow-xl sticky text-center top-0 w-full z-10"> Acciones </th>
             </tr>
         </thead>
         <tbody slot="tbody">
-            {#each nombre_entidad_plural.data as nombre_entidad_singular (nombre_entidad_singular.id)}
+            {#each typeservices.data as typeservice (typeservice.id)}
                 <tr class="hover:bg-gray-100 focus-within:bg-gray-100">
                     <td class="border-t">
                         <p class="px-6 py-4 focus:text-orange-500 first-letter-uppercase">
-                            {nombre_entidad_singular.columna}
-                        </p>
-                    </td>
-                    <td class="border-t">
-                        <p class="px-6 py-4 focus:text-orange-500 first-letter-uppercase">
-                            {nombre_entidad_singular.columna}
+                            {typeservice.nombre}
                         </p>
                     </td>
 
                     <td class="border-t td-actions">
-                        <DataTableMenu class={nombre_entidad_plural.data.length < 4 ? 'z-50' : ''}>
-                            <Item on:SMUI:action={() => Inertia.visit(route('ruta.show', nombre_entidad_singular.id))}>
+                        <DataTableMenu class={typeservices.data.length < 4 ? 'z-50' : ''}>
+                            <Item on:SMUI:action={() => Inertia.visit(route('types-services.show', typeservice.id))}>
                                 <Text>Ver detalles</Text>
                             </Item>
 
-                            <Item on:SMUI:action={() => Inertia.visit(route('ruta.edit', nombre_entidad_singular.id))}>
+                            <Item on:SMUI:action={() => Inertia.visit(route('types-services.edit', typeservice.id))}>
                                 <Text>Editar</Text>
                             </Item>
 
-                            <Item on:SMUI:action={() => ((nombre_entidad_singularId = nombre_entidad_singular.id), (dialogOpen = true))}>
+                            <Item on:SMUI:action={() => ((typeservicesId = typeservice.id), (dialogOpen = true))}>
                                 <Text>Eliminar</Text>
                             </Item>
                         </DataTableMenu>
@@ -86,16 +81,16 @@
                 </tr>
             {/each}
 
-            {#if nombre_entidad_plural.data.length === 0}
+            {#if typeservices.data.length === 0}
                 <tr>
                     <td class="border-t px-6 py-4" colspan="4"> Sin información registrada </td>
                 </tr>
             {/if}
         </tbody>
     </DataTable>
-    <Pagination links={nombre_entidad_plural.links} />
+    <Pagination links={typeservices.links} />
 
-    <Dialog bind:open={dialogOpen}>
+    <Dialog bind:open={dialogTypeServiceOpen}>
         <div slot="title" class="flex items-center">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
@@ -113,7 +108,7 @@
         </div>
         <div slot="actions">
             <div class="p-4">
-                <Button on:click={(event) => (dialogOpen = false)} variant={null}>Cancelar</Button>
+                <Button on:click={(event) => (dialogTypeServiceOpen = false)} variant={null}>Cancelar</Button>
                 <Button variant="raised" on:click={destroy}>Confirmar</Button>
             </div>
         </div>

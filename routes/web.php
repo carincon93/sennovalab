@@ -5,6 +5,7 @@ use Inertia\Inertia;
 use App\Http\Controllers\AppController;
 use App\Http\Controllers\UserInternoController;
 use App\Http\Controllers\UserExternoController;
+use App\Http\Controllers\TypeServiceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,6 +31,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::delete('/users/{user}', [AppController::class, 'destroyUser'])->name('users.destroy');
     Route::resource('/users-externos', UserExternoController::class)->except(['index', 'destroy'])->parameters(['users-externos' => 'user-externo']);
     Route::resource('/users-internos', UserInternoController::class)->except(['index', 'destroy'])->parameters(['users-internos' => 'user-interno']);
+    Route::resource('/types-services', TypeServiceController::class)->parameters(['types-services' => 'type-service']);
 });
 
 require __DIR__ . '/auth.php';
