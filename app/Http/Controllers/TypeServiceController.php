@@ -60,7 +60,11 @@ class TypeServiceController extends Controller
      */
     public function show($id)
     {
-        //
+        //error_log("error mensaje");
+        $typeservice = TypeService::where('id', '=', $id)->first();
+        return Inertia::render('TypeServices/Show', [
+            'type_service' => $typeservice
+        ]);
     }
 
     /**
