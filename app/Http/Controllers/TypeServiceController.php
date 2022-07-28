@@ -106,7 +106,7 @@ class TypeServiceController extends Controller
     public function destroy($id)
     {
         $typeservice = TypeService::where('id', '=', $id)->first();
-        $typeservice->destroy();
+        $typeservice->delete();
         return redirect()->back()->with('success', 'El recurso se ha eliminado correctamente.');
     }
 }
