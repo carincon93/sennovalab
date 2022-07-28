@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\TypeService;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreTypeServiceRequest;
+use App\Http\Requests\UpdateTypeServiceRequest;
 use Spatie\Permission\Models\Role;
 use Inertia\Inertia;
 
@@ -75,7 +76,10 @@ class TypeServiceController extends Controller
      */
     public function edit($id)
     {
-        //
+        $typeservice = TypeService::where('id', '=', $id)->first();
+        return Inertia::render('TypeServices/Edit', [
+            'type_service' => $typeservice
+        ]);
     }
 
     /**
@@ -85,9 +89,12 @@ class TypeServiceController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdateTypeServiceRequest $request, $id)
     {
-        //
+        $typeservice = TypeService::where('id', '=', $id)->first();
+        $typeservice->nombre = $request->nombre_tipo_servicio;
+        $typeservice->update();
+        return redirect()->back()->with('success', 'El recurso se ha modificado correctamente.');
     }
 
     /**
@@ -98,6 +105,8 @@ class TypeServiceController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $typeservice = TypeService::where('id', '=', $id)->first();
+        $typeservice->destroy();
+        return redirect()->back()->with('success', 'El recurso se ha eliminado correctamente.');
     }
 }

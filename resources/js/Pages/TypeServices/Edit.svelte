@@ -10,12 +10,12 @@
      * Datos que llegan desde el controlador - backend
      */
     export let errors
-    export let nombre_entidad_singular
+    export let type_service
 
     /**
      * Título para la pestaña del navegador
      */
-    $: $title = 'Editar ' + nombre_entidad_singular.columna
+    $: $title = 'Editar ' + type_service.nombre
 
     /**
      * Validar si el usuario autenticado es SuperAdmin
@@ -25,11 +25,11 @@
 
     let sending = false
     let form = useForm({
-        columna: nombre_entidad_singular.columna,
+        nombre_tipo_servicio: type_service.nombre,
     })
 
     function submit() {
-        $form.put(route('ruta.update', nombre_entidad_singular.id), {
+        $form.put(route('types-services.update', type_service.id), {
             onStart: () => (sending = true),
             onFinish: () => (sending = false),
             preserveScroll: true,
@@ -42,7 +42,7 @@
         <div class="flex items-center justify-between max-w-7xl mx-auto py-6">
             <div>
                 <h1>
-                    <a use:inertia href={route('ruta.index')} class="text-orange-500 hover:text-orange-600"> Tipos de servicios </a>
+                    <a use:inertia href={route('types-services.index')} class="text-orange-500 hover:text-orange-600"> Tipos de servicios </a>
                     <span class="text-orange-500 font-medium">/</span>
                     Editar
                 </h1>
