@@ -107,7 +107,8 @@ class UserInternoController extends Controller
         // $this->authorize('update', [User::class, $user_interno]);
 
         $user_interno->user;
-        $user_interno->user->rol_id = $user_interno->user->roles()->first() ? $user_interno->user->roles()->first()->id : null;
+        //var_dump($user_interno->user);
+       //$user_interno->user->rol_id = $user_interno->user->roles()->first() ? $user_interno->user->roles()->first()->id : null;
 
         return Inertia::render('Users/UsersInternos/Edit', [
             'user_interno'      => $user_interno,
