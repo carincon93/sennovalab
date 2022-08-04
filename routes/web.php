@@ -5,6 +5,8 @@ use Inertia\Inertia;
 use App\Http\Controllers\AppController;
 use App\Http\Controllers\UserInternoController;
 use App\Http\Controllers\UserExternoController;
+use App\Http\Controllers\ServicioController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -25,6 +27,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/', function () {
         return Inertia::render('Dashboard');
     })->name('dashboard');
+
+    Route::resource('/servicios', ServicioController::class)->parameters(['servicios' => 'servicio']);
 
     Route::get('/users', [AppController::class, 'usersIndex'])->name('users.index');
     Route::delete('/users/{user}', [AppController::class, 'destroyUser'])->name('users.destroy');

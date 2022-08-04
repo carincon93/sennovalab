@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class UserExterno extends Model
+class Servicio extends Model
 {
     use HasFactory;
 
@@ -14,7 +14,7 @@ class UserExterno extends Model
      *
      * @var string
      */
-    protected $table = 'user_externo';
+    protected $table = 'servicios';
 
     /**
      * The attributes that are mass assignable.
@@ -22,11 +22,12 @@ class UserExterno extends Model
      * @var array
      */
     protected $fillable = [
-        'codigo_cliente',
-        'tipo_usuario',
-        'empresa_centro_formacion',
-        'nit_rut',
-        'digito_verificacion',
+        'codigo_servicio',
+        'descripcion_necesidad',
+        'user_externo_id',
+        'tipo_servicio_id',
+        'categoria_linea_desarrollo_id'
+
     ];
 
     /**
@@ -48,22 +49,33 @@ class UserExterno extends Model
     ];
 
     /**
-     * Relationship with User
+     * Relationship with UserExterno
      *
      * @return object
      */
-    public function user()
+    public function userExterno()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(UserExterno::class);
     }
+
     /**
-     * Relationship with Servicio
+     * Relationship with TipoServicio
      *
      * @return object
      */
-    public function servicio()
+    public function tipoServicio()
     {
-        return $this->hasMany(Servicio::class);
+        return $this->belongsTo(TipoServicio::class);
+    }
+
+    /**
+     * Relationship with CategoriaLineaDesarrollo
+     *
+     * @return object
+     */
+    public function categoriaLineaDesarrollo()
+    {
+        return $this->belongsTo(CategoriaLineaDesarrollo::class);
     }
 
     /**
@@ -73,26 +85,11 @@ class UserExterno extends Model
      * @param  mixed $filters
      * @return void
      */
-    public function scopeFilterUserInterno($query, array $filters)
+    public function scopeFilterServicio($query, array $filters)
     {
         // En el where reemplazar 'Nombre columna' por el nombre de la columna a filtrar
         $query->when($filters['search'] ?? null, function ($query, $search) {
-            $query->join('users', 'user_externo.user_id', 'users.id');
-            $query->where('users.primer_nombre', 'like', '%' . $search . '%');
+            $query->where('descripcion_necesidad', 'like', '%' . $search . '%');
         });
-    }
-
-    /**
-     * Get codigo e.g. SLAB-0001-2022
-     *
-     * @return string
-     */
-    public static function makeCodigo($id, $year)
-    {
-        $year = date('Y', strtotime($year));
-        $numeroConsecutivo = sprintf("%04s", $id);
-        $codigo = 'CLI-' . $numeroConsecutivo . '-' . $year;
-
-        return $codigo;
     }
 }
