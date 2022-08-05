@@ -22,16 +22,12 @@
     // let authUser = $page.props.auth.user
     // let isSuperAdmin = checkRole(authUser, [1])
 
-    let sending = false
     let form = useForm({
-        nombre_tipo_servicio: '',
+        nombre: '',
     })
 
     function submit() {
-        $form.post(route('types-services.store'), {
-            onStart: () => (sending = true),
-            onFinish: () => (sending = false),
-        })
+        $form.post(route('tipos-servicios.store'), {})
     }
 </script>
 
@@ -40,7 +36,7 @@
         <div class="flex items-center justify-between max-w-7xl mx-auto py-6">
             <div>
                 <h1>
-                    <a use:inertia href={route('types-services.index')} class="text-orange-500 hover:text-orange-600"> Tipos de servicios </a>
+                    <a use:inertia href={route('tipos-servicios.index')} class="text-orange-500 hover:text-orange-600"> Tipos de servicios </a>
                     <span class="text-orange-500 font-medium">/</span>
                     Crear
                 </h1>
@@ -54,7 +50,7 @@
             <p class="mt-1 text-sm text-gray-600">Ingrese la siguiente información para crear un nuevo tipo de servicio.</p>
         </div>
         <div class="col-span-2">
-            <Form {errors} {submit} {sending} {form} />
+            <Form {errors} {submit} {form} />
         </div>
     </div>
 </AuthenticatedLayout>

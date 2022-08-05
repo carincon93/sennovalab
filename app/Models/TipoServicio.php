@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class TypeService extends Model
+class TipoServicio extends Model
 {
     use HasFactory;
 
@@ -51,7 +51,7 @@ class TypeService extends Model
      * @param  mixed $filters
      * @return void
      */
-    public function scopeFilterTypeService($query, array $filters)
+    public function scopeFilterTipoServicio($query, array $filters)
     {
         // En el where reemplazar 'Nombre columna' por el nombre de la columna a filtrar
         $query->when($filters['search'] ?? null, function ($query, $search) {

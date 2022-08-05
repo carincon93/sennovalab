@@ -156,7 +156,7 @@
                     </a>
                 </li>
                 <li>
-                    <a use:inertia href={route('types-services.index')} class="flex items-center">
+                    <a use:inertia href={route('tipos-servicios.index')} class="flex items-center mt-4">
                         <div class="inline-block rounded-md border border-violet-400">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 11.2" class="w-5" style="margin: 4.02px 2px;">
                                 <g id="a" />
@@ -172,7 +172,7 @@
                                 </g>
                             </svg>
                         </div>
-                        <span class="text-violet-200 ml-5 nav-option-title"> Tipo de servicios </span>
+                        <span class="text-violet-200 ml-5 nav-option-title"> Tipos de servicios </span>
                     </a>
                 </li>
             </ul>

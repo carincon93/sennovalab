@@ -10,12 +10,12 @@
      * Datos que llegan desde el controlador - backend
      */
     export let errors
-    export let type_service
+    export let tipo_servicio
 
     /**
      * Título para la pestaña del navegador
      */
-    $: $title = 'Editar ' + type_service.nombre
+    $: $title = 'Editar ' + tipo_servicio.nombre
 
     /**
      * Validar si el usuario autenticado es SuperAdmin
@@ -23,15 +23,12 @@
     // let authUser = $page.props.auth.user
     // let isSuperAdmin = checkRole(authUser, [1])
 
-    let sending = false
     let form = useForm({
-        nombre_tipo_servicio: type_service.nombre,
+        nombre: tipo_servicio.nombre,
     })
 
     function submit() {
-        $form.put(route('types-services.update', type_service.id), {
-            onStart: () => (sending = true),
-            onFinish: () => (sending = false),
+        $form.put(route('tipos-servicios.update', tipo_servicio.id), {
             preserveScroll: true,
         })
     }
@@ -42,7 +39,7 @@
         <div class="flex items-center justify-between max-w-7xl mx-auto py-6">
             <div>
                 <h1>
-                    <a use:inertia href={route('types-services.index')} class="text-orange-500 hover:text-orange-600"> Tipos de servicios </a>
+                    <a use:inertia href={route('tipos-servicios.index')} class="text-orange-500 hover:text-orange-600"> Tipos de servicios </a>
                     <span class="text-orange-500 font-medium">/</span>
                     Editar
                 </h1>
@@ -56,7 +53,7 @@
             <p class="mt-1 text-sm text-gray-600">Ingrese la siguiente información para crear un nuevo tipo de servicio.</p>
         </div>
         <div class="bg-white rounded shadow col-span-2">
-            <Form {errors} {submit} method="put" {sending} {form} />
+            <Form {errors} {submit} method="put" {form} />
         </div>
     </div>
 </AuthenticatedLayout>

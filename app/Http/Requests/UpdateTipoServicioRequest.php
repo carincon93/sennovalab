@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class StoreTypeServiceRequest extends FormRequest
+class UpdateTipoServicioRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,7 +24,7 @@ class StoreTypeServiceRequest extends FormRequest
     public function rules()
     {
         return [
-            'nombre_tipo_servicio' => ['required', 'String', 'max:255']
+            'nombre' => ['required', 'string', 'max:255'],
         ];
     }
 }

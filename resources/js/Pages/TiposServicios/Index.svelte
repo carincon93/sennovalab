@@ -15,7 +15,7 @@
     /**
      * Datos que llegan desde el controlador - backend
      */
-    export let typeservices
+    export let tipos_servicios
 
     /**
      * Título para la pestaña del navegador
@@ -30,11 +30,10 @@
 
     let filters = {}
     let dialogDeleteOpen = false
-    let dialogTypeServiceOpen = false
-    let typeservicesId
+    let tipos_servicios_id
 
     function destroy() {
-        Inertia.delete(route('types-services.destroy', typeservicesId), {
+        Inertia.delete(route('tipos-servicios.destroy', tipos_servicios_id), {
             onSuccess: () => (dialogDeleteOpen = false),
         })
     }
@@ -45,7 +44,7 @@
         <div slot="title">Tipos de servicios</div>
 
         <div slot="actions">
-            <Button on:click={() => Inertia.visit(route('types-services.create'))} variant="raised" class="bg-orange-500">Crear tipo de servicio</Button>
+            <Button on:click={() => Inertia.visit(route('tipos-servicios.create'))} variant="raised" class="bg-orange-500">Crear tipo de servicio</Button>
         </div>
 
         <thead slot="thead">
@@ -55,25 +54,25 @@
             </tr>
         </thead>
         <tbody slot="tbody">
-            {#each typeservices.data as typeservice (typeservice.id)}
+            {#each tipos_servicios.data as tipo_servicio (tipo_servicio.id)}
                 <tr class="hover:bg-gray-100 focus-within:bg-gray-100">
                     <td class="border-t">
                         <p class="px-6 py-4 focus:text-orange-500 first-letter-uppercase">
-                            {typeservice.nombre}
+                            {tipo_servicio.nombre}
                         </p>
                     </td>
 
                     <td class="border-t td-actions">
-                        <DataTableMenu class={typeservices.data.length < 4 ? 'z-50' : ''}>
-                            <Item on:SMUI:action={() => Inertia.visit(route('types-services.show', typeservice.id))}>
+                        <DataTableMenu class={tipos_servicios.data.length < 4 ? 'z-50' : ''}>
+                            <Item on:SMUI:action={() => Inertia.visit(route('tipos-servicios.show', tipo_servicio.id))}>
                                 <Text>Ver detalles</Text>
                             </Item>
 
-                            <Item on:SMUI:action={() => Inertia.visit(route('types-services.edit', typeservice.id))}>
+                            <Item on:SMUI:action={() => Inertia.visit(route('tipos-servicios.edit', tipo_servicio.id))}>
                                 <Text>Editar</Text>
                             </Item>
 
-                            <Item on:SMUI:action={() => ((typeservicesId = typeservice.id), (dialogDeleteOpen = true))}>
+                            <Item on:SMUI:action={() => ((tipos_servicios_id = tipo_servicio.id), (dialogDeleteOpen = true))}>
                                 <Text>Eliminar</Text>
                             </Item>
                         </DataTableMenu>
@@ -81,14 +80,14 @@
                 </tr>
             {/each}
 
-            {#if typeservices.data.length === 0}
+            {#if tipos_servicios.data.length === 0}
                 <tr>
                     <td class="border-t px-6 py-4" colspan="4"> Sin información registrada </td>
                 </tr>
             {/if}
         </tbody>
     </DataTable>
-    <Pagination links={typeservices.links} />
+    <Pagination links={tipos_servicios.links} />
 
     <Dialog bind:open={dialogDeleteOpen}>
         <div slot="title" class="flex items-center">
