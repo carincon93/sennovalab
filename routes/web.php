@@ -29,11 +29,11 @@ Route::middleware(['auth', 'verified'])->group(function () {
     })->name('dashboard');
 
     Route::get('/users', [AppController::class, 'usersIndex'])->name('users.index');
-    Route::resource('/lineas-investigacion', LineaDesarrolloController::class)->parameters(['lineas-investigacion' => 'linea-investigacion']);
     Route::delete('/users/{user}', [AppController::class, 'destroyUser'])->name('users.destroy');
     Route::resource('/users-externos', UserExternoController::class)->except(['index', 'destroy'])->parameters(['users-externos' => 'user-externo']);
     Route::resource('/users-internos', UserInternoController::class)->except(['index', 'destroy'])->parameters(['users-internos' => 'user-interno']);
 
+    Route::resource('/lineas-desarrollo', LineaDesarrolloController::class)->parameters(['lineas-desarrollo' => 'linea-desarrollo']);
 
     Route::resource('/tipos-servicios', TipoServicioController::class)->parameters(['tipos-servicios' => 'tipo-servicio']);
 });

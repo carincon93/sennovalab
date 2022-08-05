@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class LineasDesarrollo extends Model
+class LineaDesarrollo extends Model
 {
     use HasFactory;
 
@@ -22,12 +22,7 @@ class LineasDesarrollo extends Model
      * @var array
      */
     protected $fillable = [
-        //
-        'id',
         'nombre',
-        'created_at',
-        'updated_at',
-
     ];
 
     /**
@@ -49,21 +44,11 @@ class LineasDesarrollo extends Model
     ];
 
     /**
-     * Relationship with FirstRelatedModel
-     *
-     * @return object
-     */
-    public function linea()
-    {
-        return $this->belongsTo(LineasDesarrollo::class);
-    }
-
-    /**
      * Relationship with SecondRelatedModel
      *
      * @return object
      */
-/*    public function linea()
+    /*    public function linea()
     {
         return $this->hasOne(LineasDesarrollo::class);
     } */
@@ -78,11 +63,11 @@ class LineasDesarrollo extends Model
 
 
 
-    public function scopeFilterLineas($query, array $filters)
+    public function scopeFilterLineasDesarrollo($query, array $filters)
     {
         // En el where reemplazar 'Nombre columna' por el nombre de la columna a filtrar
         $query->when($filters['search'] ?? null, function ($query, $search) {
-            $query->where('nombre', 'like', '%'.$search.'%');
+            $query->where('nombre', 'like', '%' . $search . '%');
         });
     }
 }

@@ -3,85 +3,103 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\LineaDesarrolloRequest;
 use Illuminate\Http\Request;
-
-
-use App\Models\LineasDesarrollo;
+use App\Models\LineaDesarrollo;
 use Inertia\Inertia;
-
-
 
 class LineaDesarrolloController extends Controller
 {
-    //
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function index()
     {
-
-        return Inertia::render('Lineas/Index', [
+        return Inertia::render('LineasDesarrollo/Index', [
             'filters'   => request()->all('search'),
-            'lineas'     => LineasDesarrollo::orderBy('nombre', 'ASC')
-                ->FilterLineas(request()->only('search'))->paginate(),
+            'lineas_desarrollo'    => LineaDesarrollo::orderBy('nombre', 'ASC')
+                ->filterLineasDesarrollo(request()->only('search'))->paginate(),
         ]);
-
     }
 
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function create()
     {
-        return Inertia::render('Lineas/Create',);
+        return Inertia::render('LineasDesarrollo/Create',);
     }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(LineaDesarrolloRequest $request)
+    {
+        $linea_desarrollo = new LineaDesarrollo();
+        $linea_desarrollo->nombre = $request->nombre;
+
+        $linea_desarrollo->save();
+
+        return redirect()->route('lineas-desarrollo.index')->with('success', 'El recurso se ha creado correctamente.');
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Models\LineaDesarrollo  $linea_desarrollo
+     * @return \Illuminate\Http\Response
+     */
     public function show()
     {
-        return Inertia::render('Lineas/Show');
+        return Inertia::render('LineasDesarrollo/Show');
     }
 
-    public function destroy( $lineaId)
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  \App\Models\LineaDesarrollo  $linea_desarrollo
+     * @return \Illuminate\Http\Response
+     */
+    public function edit(LineaDesarrollo $linea_desarrollo)
     {
-
-        LineasDesarrollo::where('id', $lineaId)->delete();
-        return redirect()->route('lineas-investigacion.index')->with('success', 'El recurso se ha eliminado correctamente.');
-
-    }
-
-    public function store(Request $request)
-    {
-
-        $linea = new LineasDesarrollo();
-        $linea->nombre   = $request->nombre_linea;
-        $linea->save();
-        return redirect()->route('lineas-investigacion.index');
-
-    }
-
-
-    public function edit( $id)
-    {
-        $linea_Desarrollo = LineasDesarrollo::where('id', '=', $id)->first();
-
-          return Inertia::render('Lineas/Edit', [
-            'linea_Desarrollo' => $linea_Desarrollo
+        return Inertia::render('LineasDesarrollo/Edit', [
+            'linea_desarrollo' => $linea_desarrollo
         ]);
-
-
     }
 
-    public function update(Request $request,$id_linea)
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Models\LineaDesarrollo  $linea_desarrollo
+     * @return \Illuminate\Http\Response
+     */
+    public function update(LineaDesarrolloRequest $request, LineaDesarrollo $linea_desarrollo)
     {
+        $linea_desarrollo->nombre = $request->nombre;
 
-        $ide = $request->id_linea;
-        $name = $request->nombre_linea;
+        $linea_desarrollo->save();
 
-        $exist = LineasDesarrollo::where('id', '=', $ide)->where('nombre', '=', $name)->exists();
+        return redirect()->route('lineas-desarrollo.index')->with('success', 'El recurso se ha actualizado correctamente.');
+    }
 
-        if ($exist) {
-        return redirect()->route('lineas-investigacion.index')->with('error', 'error el nombre de la linea ya existe.');
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\Models\LineaDesarrollo  $linea_desarrollo
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy(LineaDesarrollo $linea_desarrollo)
+    {
+        $linea_desarrollo->delete();
 
-        }
-        else {
-            LineasDesarrollo::where('id', '=', $ide)
-                        ->update(['nombre' => $name]);
-
-            return redirect()->route('lineas-investigacion.index')->with('success', 'El recurso se ha Actualizado correctamente.');
-        }
-
+        return redirect()->route('lineas-desarrollo.index')->with('success', 'El recurso se ha eliminado correctamente.');
     }
 }

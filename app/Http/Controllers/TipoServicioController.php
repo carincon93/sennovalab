@@ -54,7 +54,7 @@ class TipoServicioController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\TipoServicio  $tipo_servicio
      * @return \Illuminate\Http\Response
      */
     public function show(TipoServicio $tipo_servicio)
@@ -67,7 +67,7 @@ class TipoServicioController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\TipoServicio  $tipo_servicio
      * @return \Illuminate\Http\Response
      */
     public function edit(TipoServicio $tipo_servicio)
@@ -81,25 +81,28 @@ class TipoServicioController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Models\TipoServicio  $tipo_servicio
      * @return \Illuminate\Http\Response
      */
     public function update(UpdateTipoServicioRequest $request, TipoServicio $tipo_servicio)
     {
         $tipo_servicio->nombre = $request->nombre;
-        $tipo_servicio->update();
+
+        $tipo_servicio->save();
+
         return redirect()->back()->with('success', 'El recurso se ha modificado correctamente.');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Models\TipoServicio  $tipo_servicio
      * @return \Illuminate\Http\Response
      */
     public function destroy(TipoServicio $tipo_servicio)
     {
         $tipo_servicio->delete();
+
         return redirect()->back()->with('success', 'El recurso se ha eliminado correctamente.');
     }
 }

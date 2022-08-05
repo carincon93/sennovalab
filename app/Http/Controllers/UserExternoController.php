@@ -102,7 +102,7 @@ class UserExternoController extends Controller
         //var_dump($user_externo);
         // $this->authorize('update', [UserExterno::class, $user_externo]);
 
-         return Inertia::render('Users/UsersExternos/Edit', [
+        return Inertia::render('Users/UsersExternos/Edit', [
             'user_externo' => $user_externo
         ]);
     }
@@ -141,7 +141,7 @@ class UserExternoController extends Controller
 
         $user_externo->user->syncRoles(3);
 
-        return redirect()->back()->with('success', 'El recurso se ha modificado correctamente.');
+        return redirect()->back()->with('success', 'El recurso se ha actualizado correctamente.');
     }
 
     /**

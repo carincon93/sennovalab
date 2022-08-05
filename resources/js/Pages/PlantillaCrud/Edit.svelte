@@ -30,8 +30,6 @@
 
     function submit() {
         $form.put(route('ruta.update', nombre_entidad_singular.id), {
-            onStart: () => (sending = true),
-            onFinish: () => (sending = false),
             preserveScroll: true,
         })
     }
@@ -56,7 +54,7 @@
             <p class="mt-1 text-sm text-gray-600">Ingrese nueva información para editar el nombre_entidad_singular.</p>
         </div>
         <div class="bg-white rounded shadow col-span-2">
-            <Form {errors} {submit} method="put" {sending} {form} />
+            <Form {errors} {submit} method="put" {form} />
         </div>
     </div>
 </AuthenticatedLayout>

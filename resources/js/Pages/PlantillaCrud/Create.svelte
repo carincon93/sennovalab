@@ -28,10 +28,7 @@
     })
 
     function submit() {
-        $form.post(route('route.store'), {
-            onStart: () => (sending = true),
-            onFinish: () => (sending = false),
-        })
+        $form.post(route('route.store'), {})
     }
 </script>
 
@@ -54,7 +51,7 @@
             <p class="mt-1 text-sm text-gray-600">Ingrese la siguiente información para crear un nuevo nombre_entidad_singular.</p>
         </div>
         <div class="col-span-2">
-            <Form {errors} {submit} {sending} {form} />
+            <Form {errors} {submit} {form} />
         </div>
     </div>
 </AuthenticatedLayout>

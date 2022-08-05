@@ -14,7 +14,7 @@ class LineaDesarrolloRequest extends FormRequest
     public function rules()
     {
         return [
-            'nombre_linea'                     => ['required', 'string', 'max:255'],
+            'nombre' => ['required', 'string', 'max:255'],
         ];
     }
 
@@ -25,12 +25,6 @@ class LineaDesarrolloRequest extends FormRequest
      */
     protected function prepareForValidation()
     {
-        if (is_array($this->nombre_linea)) {
-            $this->merge([
-                'nombre_linea' => $this->nombre_linea['value'],
-            ]);
-        }
-
-
+        //
     }
 }

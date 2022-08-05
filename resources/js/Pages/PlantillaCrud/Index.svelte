@@ -30,10 +30,10 @@
 
     let filters = {}
     let dialogOpen = false
-    let nombre_entidad_singularId
+    let nombre_entidad_singular_id
 
     function destroy() {
-        Inertia.delete(route('ruta.destroy', nombre_entidad_singularId), {
+        Inertia.delete(route('ruta.destroy', nombre_entidad_singular_id), {
             onSuccess: () => (dialogOpen = false),
         })
     }
@@ -78,7 +78,7 @@
                                 <Text>Editar</Text>
                             </Item>
 
-                            <Item on:SMUI:action={() => ((nombre_entidad_singularId = nombre_entidad_singular.id), (dialogOpen = true))}>
+                            <Item on:SMUI:action={() => ((nombre_entidad_singular_id = nombre_entidad_singular.id), (dialogOpen = true))}>
                                 <Text>Eliminar</Text>
                             </Item>
                         </DataTableMenu>
