@@ -155,6 +155,36 @@
                         <span class="text-violet-200 ml-5 nav-option-title"> Usuarios </span>
                     </a>
                 </li>
+                <li>
+                    <a use:inertia href={route('tipos-servicios.index')} class="flex items-center mt-4">
+                        <div class="inline-block rounded-md border border-violet-400">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 11.2" class="w-5" style="margin: 4.02px 2px;">
+                                <g id="a" />
+                                <g id="b">
+                                    <g id="c">
+                                        <path d="M7,7c1.26,0,2.26-1.02,2.26-2.27s-1.02-2.27-2.26-2.27-2.26,1.02-2.26,2.27c-.02,1.26,1,2.27,2.26,2.27Z" style="fill:#a78bfa;" />
+                                        <path d="M8.09,7.7h-2.18c-1.72,0-3.11,1.31-3.11,2.92,0,.32,.28,.58,.62,.58h7.16c.34,0,.62-.26,.62-.58,0-1.61-1.39-2.92-3.11-2.92Z" style="fill:#a78bfa;" />
+                                        <circle cx="11.2" cy="1.75" r="1.75" style="fill:#c8bbff;" />
+                                        <path d="M4.02,4.73c0-.12,.02-.23,.04-.35-.24-.13-.5-.18-.78-.18H1.93c-1.06,0-1.93,.91-1.93,2.04,0,.23,.17,.41,.39,.41H4.75c-.45-.52-.73-1.19-.73-1.93Z" style="fill:#a78bfa;" />
+                                        <circle cx="2.8" cy="1.75" r="1.75" style="fill:#a78bfa;" />
+                                        <path d="M12.07,4.2h-1.35c-.28,0-.54,.07-.78,.18,.01,.12,.03,.23,.03,.34,0,.74-.28,1.4-.73,1.93h4.37c.21,0,.39-.18,.39-.41,0-1.13-.86-2.04-1.93-2.04Z" style="fill:#c8bbff;" />
+                                    </g>
+                                </g>
+                            </svg>
+                        </div>
+                        <span class="text-violet-200 ml-5 nav-option-title"> Tipos de servicios </span>
+                    </a>
+                </li>
+                <li>
+                    <a use:inertia href={route('lineas-desarrollo.index')} class="flex items-center mt-4">
+                        <div class="inline-block rounded-md border border-violet-400">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path style="color:#996aff" stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                            </svg>
+                        </div>
+                        <span class="text-violet-200 ml-5 nav-option-title">Líneas de desarrollo</span>
+                    </a>
+                </li>
             </ul>
         </nav>
     </div>

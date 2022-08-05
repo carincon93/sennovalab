@@ -9,6 +9,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreUserInternoRequest;
 use App\Http\Requests\UpdateUserInternoRequest;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Inertia\Inertia;
 
 class UserInternoController extends Controller
@@ -107,7 +108,8 @@ class UserInternoController extends Controller
         // $this->authorize('update', [User::class, $user_interno]);
 
         $user_interno->user;
-        $user_interno->user->rol_id = $user_interno->user->roles()->first() ? $user_interno->user->roles()->first()->id : null;
+        //var_dump($user_interno->user);
+        //$user_interno->user->rol_id = $user_interno->user->roles()->first() ? $user_interno->user->roles()->first()->id : null;
 
         return Inertia::render('Users/UsersInternos/Edit', [
             'user_interno'      => $user_interno,
@@ -155,7 +157,7 @@ class UserInternoController extends Controller
 
         $user_interno->user->syncRoles($request->rol_id);
 
-        return redirect()->back()->with('success', 'El recurso se ha modificado correctamente.');
+        return redirect()->back()->with('success', 'El recurso se ha actualizado correctamente.');
     }
 
     /**

@@ -1,6 +1,4 @@
 <script>
-    import { checkRole, checkPermission } from '@/Utils'
-
     import Input from '@/Shared/Input'
     import Label from '@/Shared/Label'
     import LoadingButton from '@/Shared/LoadingButton'
@@ -22,9 +20,9 @@
 
 <form on:submit|preventDefault={submit} class="col-span-2">
     <fieldset class="px-8">
-        <div>
-            <Label required labelFor="columna" value="Nombre columna" />
-            <Input id="columna" type="text" bind:value={$form.columna} error={errors.columna} required />
+        <div class="mt-20">
+            <Label class="mb-5" required labelFor="nombre" value="Nombre de la línea de desarrollo" />
+            <Input id="nombre" type="text" bind:value={$form.nombre} error={errors.nombre} required />
         </div>
     </fieldset>
     <div class="mt-10 px-8 py-4 flex items-center sticky bottom-0">

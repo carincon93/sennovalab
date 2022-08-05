@@ -14,7 +14,7 @@
     /**
      * Título para la pestaña del navegador
      */
-    $: $title = 'Crear nombre_entidad_singular'
+    $: $title = 'Crear tipo de servicio'
 
     /**
      * Validar si el usuario autenticado es SuperAdmin
@@ -22,13 +22,12 @@
     // let authUser = $page.props.auth.user
     // let isSuperAdmin = checkRole(authUser, [1])
 
-    let sending = false
     let form = useForm({
-        fillable,
+        nombre: '',
     })
 
     function submit() {
-        $form.post(route('route.store'), {})
+        $form.post(route('tipos-servicios.store'), {})
     }
 </script>
 
@@ -37,7 +36,7 @@
         <div class="flex items-center justify-between max-w-7xl mx-auto py-6">
             <div>
                 <h1>
-                    <a use:inertia href={route('route.index')} class="text-orange-500 hover:text-orange-600"> nombre_entidad_plural </a>
+                    <a use:inertia href={route('tipos-servicios.index')} class="text-orange-500 hover:text-orange-600"> Tipos de servicios </a>
                     <span class="text-orange-500 font-medium">/</span>
                     Crear
                 </h1>
@@ -47,8 +46,8 @@
 
     <div class="grid grid-cols-3 gap-6 mt-20">
         <div class="col-span-1">
-            <h3 class="text-lg font-medium leading-6 text-gray-900">Información del nombre_entidad_singular</h3>
-            <p class="mt-1 text-sm text-gray-600">Ingrese la siguiente información para crear un nuevo nombre_entidad_singular.</p>
+            <h3 class="text-lg font-medium leading-6 text-gray-900">Información del tipo de servicio</h3>
+            <p class="mt-1 text-sm text-gray-600">Ingrese la siguiente información para crear un nuevo tipo de servicio.</p>
         </div>
         <div class="col-span-2">
             <Form {errors} {submit} {form} />
