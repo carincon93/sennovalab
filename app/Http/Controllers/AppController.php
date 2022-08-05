@@ -19,6 +19,16 @@ class AppController extends Controller
         ]);
     }
 
+    public function lineIndex()
+    {
+        return Inertia::render('User/lineasDesarro');
+        /* return Inertia::render('Users/lineasDesarrollo', [
+            'filters'   => request()->all('search'),
+            'users'     => User::with('userInterno', 'userExterno')->orderBy('primer_nombre', 'ASC')
+                ->filterUser(request()->only('search'))->paginate(),
+        ]); */
+    }
+
     public function destroyUser(User $user)
     {
         // $this->authorize('delete', [User::class, $user]);

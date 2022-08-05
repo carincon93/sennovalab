@@ -99,9 +99,10 @@ class UserExternoController extends Controller
     public function edit(UserExterno $user_externo)
     {
         $user_externo->user;
+        //var_dump($user_externo);
         // $this->authorize('update', [UserExterno::class, $user_externo]);
 
-        return Inertia::render('Users/UsersExternos/Edit', [
+         return Inertia::render('Users/UsersExternos/Edit', [
             'user_externo' => $user_externo
         ]);
     }

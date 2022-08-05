@@ -11,6 +11,7 @@
      */
     export let errors
     export let user_externo
+    console.table(user_externo)
 
     let tipos_documento = [
         { value: 'cc', label: 'Cédula de ciudadanía' },
